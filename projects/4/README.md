@@ -9,27 +9,27 @@ The CONVERGE project and the Data Management community within ELIXIR will benefi
 
 ## Topics
 
-Biodiversity
-Bioschemas
-Cancer
-Compute Platfrom
-Covid-19
-Data Platform
-EOSC-life
-Federated Human Data
-GA4GH partnership
-Human Copy Number Variation
-Interoperability Platform
-Intrinsically Disordered Community
-Machine learning
-Marine Metagenomics
-Metabolomics
-Microbial Biotechnology
-Plant Sciences
-Proteomics
-Rare Disease
-Tools Platform
-Training Platform
+- Biodiversity
+- Bioschemas
+- Cancer
+- Compute Platfrom
+- Covid-19
+- Data Platform
+- EOSC-life
+- Federated Human Data
+- GA4GH partnership
+- Human Copy Number Variation
+- Interoperability Platform
+- Intrinsically Disordered Community
+- Machine learning
+- Marine Metagenomics
+- Metabolomics
+- Microbial Biotechnology
+- Plant Sciences
+- Proteomics
+- Rare Disease
+- Tools Platform
+- Training Platform
 
 **Project Number:** 4
 
@@ -41,9 +41,8 @@ Training Platform
 
 ### Lead(s)
 
-Korbinian Bösl korbinian.bosl@uib.no
-
-Bert Droesbeke bert.droesbeke@ugent.vib.be
+- Korbinian Bösl korbinian.bosl@uib.no
+- Bert Droesbeke bert.droesbeke@ugent.vib.be
 
 ## Expected outcomes
 
