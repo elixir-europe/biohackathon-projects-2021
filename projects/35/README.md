@@ -30,9 +30,8 @@ Nataly Buslón nataly.buslon@bsc.es
 
 ## Expected outcomes
 
-- Access to selected ELIXIR data resources and metadata identification [1 days]
-- Retrieval of metadata information and quantification of missing categories [2 days]
-- Reporting and recommendations writing [1 day]
+Task 1. Quantification of bias in selected resources
+Task 2. Evaluation of social and ethical impact
 
 ## Expected audience
 
