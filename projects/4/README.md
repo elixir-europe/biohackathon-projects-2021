@@ -1,4 +1,4 @@
-# Project 4: Highlight your data management tools assembly in the RDMkit!
+# Project 4: Highlight your data management tool assembly in the RDMkit!
 
 ## Abstract
 
