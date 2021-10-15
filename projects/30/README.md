@@ -1,4 +1,4 @@
-# Project 30: Federated Learning and Machine Learning to power integrated diagnostics of leukemias and lymphomas
+# Project 30: Federated Learning and Machine Learning to power integrated diagnostics of breast cancer
 
 ## Abstract
 
