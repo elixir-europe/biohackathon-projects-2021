@@ -32,8 +32,8 @@ This repository is meant for the participants of the [BioHackathon](https://bioh
 * [Project 27](projects/27): MOWL: A library for Machine Learning with Ontologies
 * [Project 28](projects/28): Extending SCHeMa functionalities
 * [Project 29](projects/29): Facilitating life science metadata curation through Bioschemas Validators
-* [Project 30](projects/30): Federated Learning and Machine Learning to power integrated diagnostics of leukemias and lymphomas
-* [Project 31](projects/31) Application of genome graph for standard representation of structural variations in RDF
+* [Project 30](projects/30): Federated Learning and Machine Learning to power integrated diagnostics of breast cancer
+* [Project 31](projects/31): Application of genome graph for standard representation of structural variations in RDF
 * [Project 32](projects/32): Connecting ELIXIR-related open data on Wikidata via WikiProject ELIXIR
 * [Project 33](projects/33): Implementation, testing and training on reference genome assembly pipelines for the eukaryotic tree of life
 * [Project 34](projects/34): Galaxy training resources for CNVs detection software
