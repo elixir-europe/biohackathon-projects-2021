@@ -26,6 +26,7 @@ Training Platform
 
 Tiago Lubiana
 tiago.lubiana.alves@usp.br
+
 Martina Kutmon
 martina.kutmon@maastrichtuniversity.nl
 
