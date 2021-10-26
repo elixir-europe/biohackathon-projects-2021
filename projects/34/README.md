@@ -23,7 +23,7 @@ Training Platform
 
 ### Lead(s)
 
-Krzysztof Poterlowicz, K.Poterlowicz1@bradford.ac.uk
+Krzysztof Poterlowicz, K.Poterlowicz1@bradford.ac.uk\
 Katarzyna Kamieniecka, K.Murat1@bradford.ac.uk
 
 ## Expected outcomes
