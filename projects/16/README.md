@@ -20,8 +20,7 @@ This proof-of-concept can be extended to cover the other areas of food science s
 ## Background papers
 
     1. A generic ontological network for Agri-food experiment integration – Application to viticulture and winemaking: https://www.researchgate.net/publication/318053346
-
-    1. Ontology building process: The wine domain: https://www.researchgate.net/publication/253758073
+    2. Ontology building process: The wine domain: https://www.researchgate.net/publication/253758073
 
 ## Topics
 
