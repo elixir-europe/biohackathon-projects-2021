@@ -17,6 +17,11 @@ Data mining with machine learning is an urgency for the study of dietary intoler
 
 This proof-of-concept can be extended to cover the other areas of food science such as cultures for fermented products, and food allergy studies. This is of relevance to the ELIXIR Food & Nutrition Community, and its industry partners.
 
+## Background papers
+
+    1. A generic ontological network for Agri-food experiment integration – Application to viticulture and winemaking: https://www.researchgate.net/publication/318053346
+    2. Ontology building process: The wine domain: https://www.researchgate.net/publication/253758073
+
 ## Topics
 
 Data Platform,
