@@ -8,12 +8,10 @@ Our tool WESkit implements the GA4GH WES standard and is developed with high dat
 
 ## Topics
 
-Compute Platfrom
+Compute Platform
 GA4GH partnership
 
 **Project Number:** 8
-
-
 
 **EasyChair Number:** 12
 
@@ -21,7 +19,8 @@ GA4GH partnership
 
 ### Lead(s)
 
-sven.twardziok@charite.de
+ * sven.twardziok@charite.de
+ * p.kensche@dkfz-heidelberg.de
 
 ## Expected outcomes
 
@@ -33,3 +32,8 @@ ELIXIR-AAI experts, GA4GH DRS and TRS user and developer, workflow developer, py
 
 **Number of expected hacking days**: 4
 
+## Further project information
+
+Code development will be done in the WESkit Gitlab Repositories. The [Gitlab project group](https://gitlab.com/one-touch-pipeline/weskit) contains repositories specifically for the [WES-API service](https://gitlab.com/one-touch-pipeline/weskit/api), [Documentation](https://gitlab.com/one-touch-pipeline/weskit/documentation), and [deployment](https://gitlab.com/one-touch-pipeline/weskit/deployment).
+
+During the Biohackathon we will collect and manage our work with a dedicated [project board](https://gitlab.com/one-touch-pipeline/weskit/api/-/boards/3460290?milestone_title=Elixir%20Biohackathon%202021).
