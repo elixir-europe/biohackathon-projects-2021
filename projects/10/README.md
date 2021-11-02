@@ -5,7 +5,7 @@
 The Gallantries project is a collaboration between five European universities, members of Software Carpentry, and members of the Galaxy Project. Goal of the project is to increase bioinformatics and core data analysis skills in the field of life sciences across Europe.
 A pilot effort in 2019, started during Biohackathon in 2018, developed Hybrid Training: broadcast of a single instructor to learners in distributed classrooms with on-site helpers. This significantly improved the scalability and decreased the environmental impact of having instructors travel around Europe. With COVID-19 pandemic, hybrid and/or fully virtual training events have become the norm. To support this teaching format, training materials must be adapted, and instructors need to be trained.
 
-Main focus of the BioHackathon project will be to discuss, and create draft for training modules on microbial analysis, machine-learning, and Train-the-Trainer (TtT), specifically tailored to fit a remote/hybrid training format. Specifically, the project will include the following activities:
+Main focus of the BioHackathon project will be to discuss, and create draft for training modules on microbial analysis, genome annotation, and Train-the-Trainer (TtT), specifically tailored to fit a remote/hybrid training format. Specifically, the project will include the following activities:
 - Review existing ELIXIR TrP and GTN material
 - Define a learning plan and rough draft of the 3 modules
 
@@ -20,7 +20,7 @@ In parallel, we would like to
 - Training Platform
 - Hybrid training
 - Train the trainers
-- Machine learning
+- Genome annotation
 - Microbiome data analysis
 
 **Project Number:** 10
@@ -47,7 +47,7 @@ Bérénice Batut <berenice.batut@gmail.com>
 
 ## Expected audience
 
-Researchers with knowledge in training development, microbial data analysis, machine learning, Train the Trainer and also in training organization.
+Researchers with knowledge in training development, microbial data analysis, genome annotation, Train the Trainer and also in training organization.
 
 Some expected people:
 - Bérénice Batut (NL)
