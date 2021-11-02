@@ -38,7 +38,7 @@ Bérénice Batut <berenice.batut@gmail.com>
 - Training modules
   - Review of existing materials   
   - Learning plans for the 3 modules
-  - Rought drafts for content
+  - Rough drafts for content
 - Training infrastructure
   - Template repository to create Galaxy-based training event websites
   - Website with an API to list videos supporting Galaxy-based tutorials
