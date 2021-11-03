@@ -26,8 +26,11 @@ Tools Platform
 ### Lead(s)
 
 Venkata Satagopam, venkata.satagopam@elixir-luxembourg.org
+
 Tim Beck, timbeck@leicester.ac.uk
+
 Jordi Rambla De Argila,  jordi.rambla@crg.eu
+
 Wei Gu, wei.gu@elixir-luxembourg.org
 
 ### Invited domain expert(s)
@@ -35,10 +38,15 @@ Maxim Moinat, maxim@thehyve.nl
 
 ### Participants 
 Jacek Jarosław Lebioda, jacek.lebioda@elixir-luxembourg.org 
+
 Shorter Tom, ts339@leicester.ac.uk 
+
 Aina Jene, aina.jene@crg.eu  
+
 Babita Singh, babita.singh@crg.eu
+
 Valentin Groues, valentin.groues@uni.lu 
+
 Muhammad Shoaib, muhammad.shoaib@uni.lu 
 
 
