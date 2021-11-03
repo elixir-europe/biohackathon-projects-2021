@@ -48,5 +48,8 @@ martina.kutmon@maastrichtuniversity.nl
 
 Participants with some familiarity with one or more knowledge bases. Prior knowledge with Java for plugin development in PathVision is welcome.
 
+* Egon Willighagen
+* ...
+
 **Number of expected hacking days**: 3-4
 
