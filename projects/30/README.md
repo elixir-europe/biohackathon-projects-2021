@@ -9,7 +9,7 @@ The goal of this challenge is to create the most accurate machine learning model
 
 In the first part, this challenge will investigate this machine learning problem with data available in a single center. In a second part of the challenge, we will investigate the application of Federated Learning in healthcare. Federated learning is a new decentralized machine learning procedure to train machine learning models with multiple data providers. Instead of gathering data on a single server, the data remains locked on their servers and the algorithms and only the predictive models travel between the servers – never the data. We aim to demonstrate how  collaborative training further improves model performance over single-center training, by enabling the model to train on a larger amount of data. 
 Our project will rely on the Federated Learning software developed by Owkin, [Owkin Connect](https://owkin.com/owkin-connect/). 
-Participants will be able to use environmments with powerful GPUs provided by AWS.
+Participants will be able to use environmments with powerful GPUs in the cloud.
 
 Through the HealthChain consortium, Owkin already showed the impact of Federated Learning to accelerate medical research. We established that ML models can be trained successfully with Owkin Connect on histology images, siloed at different clinical centers, to predict treatment responses in breast cancer. 
 ## Topics
