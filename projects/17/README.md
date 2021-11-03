@@ -26,6 +26,21 @@ Tools Platform
 ### Lead(s)
 
 Venkata Satagopam, venkata.satagopam@elixir-luxembourg.org
+Tim Beck, timbeck@leicester.ac.uk
+Jordi Rambla De Argila,  jordi.rambla@crg.eu
+Wei Gu, wei.gu@elixir-luxembourg.org
+
+### Invited domain expert(s)
+Maxim Moinat, maxim@thehyve.nl
+
+### Participants 
+Jacek Jarosław Lebioda, jacek.lebioda@elixir-luxembourg.org 
+Shorter Tom, ts339@leicester.ac.uk 
+Aina Jene, aina.jene@crg.eu  
+Babita Singh, babita.singh@crg.eu
+Valentin Groues, valentin.groues@uni.lu 
+Muhammad Shoaib, muhammad.shoaib@uni.lu 
+
 
 ## Expected outcomes
 
@@ -43,15 +58,6 @@ Bioinformaticians and developers working in the areas of API development, ontolo
 
 By all means, organizers commit to the proposal with the participation and contribution of Beacon experts, developers, bioinformaticians for the event to ensure the presence of enough human resources and provide momentum during the biohackathon. 3 people from the University of Luxembourg, 2 from University of Leicester and 3 from CRG will participate in this Biohackathon topic.
 
-We plan to invite following key experts in the domain
-
-Prof. Dr. Michael Baudis
-University of Zurich
-Swiss Institute of Bioinformatics
-
-Maxim Moinat
-Thehyve (and EHDEN)
-https://www.linkedin.com/in/maxim-moinat-943b6845/
 
 **Number of expected hacking days**: 4
 
