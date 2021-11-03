@@ -74,3 +74,13 @@ Developers
 
 **Number of expected hacking days**: 4
 
+## Literature
+
+[Perspectives on automated composition of workflows in the life sciences](https://doi.org/10.12688/f1000research.54159.1)
+[APE in the Wild: Automated Exploration of Proteomics Workflows in the bio.tools Registry](https://doi.org/10.1021/acs.jproteome.0c00983)
+[Proteomics Software in bio.tools: Coverage and Annotations](https://doi.org/10.1021/acs.jproteome.0c00978)
+[Automated workflow composition in mass spectrometry-based proteomics](https://doi.org/10.1093/bioinformatics/bty646)
+[One Thousand and One Software for Proteomics: Tales of the Toolmakers of Science](https://doi.org/10.1021/acs.jproteome.9b00219)
+
+
+
