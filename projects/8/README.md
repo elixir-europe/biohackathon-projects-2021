@@ -40,6 +40,6 @@ ELIXIR-AAI experts, GA4GH DRS and TRS user and developer, workflow developer, py
 
 Information about the ELIXIR Cloud & AAI initiative initiative can be found on this [website](https://elixir-europe.github.io/cloud/) and at our [github organization](https://github.com/elixir-cloud-aai).
 
-Code development will be done in the WESkit Gitlab Repositories. The [Gitlab project group](https://gitlab.com/one-touch-pipeline/weskit) contains repositories specifically for the [WES-API service](https://gitlab.com/one-touch-pipeline/weskit/api), [Documentation](https://gitlab.com/one-touch-pipeline/weskit/documentation), and [deployment](https://gitlab.com/one-touch-pipeline/weskit/deployment).
+WESkit code development will be done in the WESkit Gitlab Repositories. The [Gitlab project group](https://gitlab.com/one-touch-pipeline/weskit) contains repositories specifically for the [WES-API service](https://gitlab.com/one-touch-pipeline/weskit/api), [Documentation](https://gitlab.com/one-touch-pipeline/weskit/documentation), and [deployment](https://gitlab.com/one-touch-pipeline/weskit/deployment).
 
 During the Biohackathon we will collect and manage our work with a dedicated [project board](https://gitlab.com/one-touch-pipeline/weskit/api/-/boards/3460290?milestone_title=Elixir%20Biohackathon%202021).
