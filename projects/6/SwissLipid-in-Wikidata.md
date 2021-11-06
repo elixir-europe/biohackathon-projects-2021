@@ -51,7 +51,8 @@ For this, see [Project 32](https://github.com/elixir-europe/biohackathon-project
 Connecting ELIXIR-related open data on Wikidata via WikiProject ELIXIR.
 
 Based on existing Bacting scripts, a script is created to take the `swisslipids_ids.tsv` file as input and create
-QuickStatements: [https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy](https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy)
+QuickStatements: [https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy](https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy) This script is using [Apache Groovy](http://www.groovy-lang.org/)
+but Bacting can also be using in Python, see [https://github.com/cthoyt/pybacting](https://github.com/cthoyt/pybacting).
 
 This script uses a federated query against https://beta.sparql.swisslipids.org/sparql/ after a suggestion by Jerven
 who indicated that the RDF4J backing this SPARQL endpoint will automatically batch the query against Wikidata, overcoming
