@@ -35,7 +35,12 @@ Metabolomics
 
 ### Lead(s)
 
-jerven.bolleman@sib.swiss
+* Jerven Bolleman jerven.bolleman@sib.swiss
+
+### Participants
+
+* Egon Willighagen
+* 
 
 ## Expected outcomes
 
