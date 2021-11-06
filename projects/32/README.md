@@ -16,8 +16,6 @@ Training Platform
 
 **Project Number:** 32
 
-
-
 **EasyChair Number:** 56
 
 ## Team
@@ -43,6 +41,11 @@ martina.kutmon@maastrichtuniversity.nl
 - New data contributions either done manually or through bots, such as missing Ensembl genes, handling versioning of genome assemblies, Complex Portal, BgeeDB, Clinvar entities. (Done during the hackathon as part of a continuous effort)
 
 - One or more PathVisio plugins for pathway curation using Wikidata.
+
+### Outcomes
+
+* [../6/SwissLipid-in-Wikidata.md](Swiss Lipid IDs in Wikidata) (together with Project 6)
+* 
 
 ## Expected audience
 
