@@ -30,13 +30,18 @@ Tools Platform
 ### Lead(s)
 
 Peter-Bram ‘t Hoen, Peter-Bram.tHoen@radboudumc.nl
+
 XiaoFeng Liao, xiaofeng.liao@radboudumc.nl
 
 ### Members
 Mark Wilkinson, mark.wilkinson@upm.es
+
 Michel Dumontier, michel.dumontier@maastrichtuniversity.nl
+
 Rajaram Kaliyaperumal, r.kaliyaperumal@lumc.nl
+
 Vincent Emonet, vincent.emonet@maastrichtuniversity.nl
+
 Pablo Alarconmoreno, pabloalarconmoreno@gmail.com
 
 ## Expected outcomes
