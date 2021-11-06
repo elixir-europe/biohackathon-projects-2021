@@ -50,6 +50,36 @@ data into Wikidata. This is not the only approach, and the process can be furthe
 For this, see [Project 32](https://github.com/elixir-europe/biohackathon-projects-2021/tree/main/projects/32):
 Connecting ELIXIR-related open data on Wikidata via WikiProject ELIXIR.
 
+Based on existing Bacting scripts, a script is created to take the `swisslipids_ids.tsv` file as input and create
+QuickStatements: [https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy](https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy)
+
+This script uses a federated query against https://beta.sparql.swisslipids.org/sparql/ after a suggestion by Jerven
+who indicated that the RDF4J backing this SPARQL endpoint will automatically batch the query against Wikidata, overcoming
+limitations of the Wikidata Query Service:
+
+```sparql
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+SELECT ?wd ?key ?value WHERE {
+  SERVICE <https://query.wikidata.org/sparql> {
+    SELECT (substr(str(?compound),32) as ?wd) ?key ?value WHERE {
+      ?compound wdt:P235 ?key .
+      OPTIONAL { ?compound wdt:P8691 ?value . }
+    }
+  }
+}
+```
+
+
+This creates a file that looks like:
+
+```shell
+Q27139080       P8691   "SLM:000000003"
+Q27139123       P8691   "SLM:000000006"
+Q27124972       P8691   "SLM:000000035"
+Q27139120       P8691   "SLM:000000047"
+Q27139134       P8691   "SLM:000000048"
+Q27088848       P8691   "SLM:000000119"
+```
 
 
 
