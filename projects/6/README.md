@@ -52,3 +52,7 @@ We expect both Schema markup makers as well as R2RML, RDF and SPARQL service dev
 
 **Number of expected hacking days**: 4
 
+## Notes
+
+* [Swiss Lipid IDs in Wikidata](SwissLipid-in-Wikidata.md)
+* 
