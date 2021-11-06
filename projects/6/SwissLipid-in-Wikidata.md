@@ -4,7 +4,8 @@ Previously, we already proposed a [Swiss Lipid property for Wikidata](https://ww
 which was approved and created in [just before the 2020 BioHackathon Europe](https://www.wikidata.org/w/index.php?title=Property:P8691&oldid=1287579005).
 But populating Wikidata with identifiers got stuck.
 
-The intention for this BioHackathon is the add them, using SwissLipid ID <> InChIKey tuples and Bacting code. This page will describe the process.
+The intention for this BioHackathon is the add them, using SwissLipid ID <> InChIKey tuples and [Bacting](https://github.com/egonw/bacting) code
+(doi:[10.21105/joss.02558](https://doi.org/10.21105/joss.02558)). This page will describe the process.
 
 ## Step 1: getting the data
 
@@ -35,3 +36,22 @@ $ wc -l swiss*tsv
    592412 swisslipids_ids.tsv
    777957 swisslipids.tsv
 ```
+
+## Step 3: creating a ShEx model
+
+Skipping this step for later this week, but here the task is to create a shape expression for Wikidata, to model how
+the identifiers will be added to Wikidata. See _A protocol for adding knowledge to Wikidata: aligning resources on human coronaviruses_
+(doi:[10.1186/s12915-020-00940-y](https://doi.org/10.1186/s12915-020-00940-y)).
+
+## Step 4: creating QuickStatements
+
+Now we have the mappings and the data model in Wikidata, we can create QuickStatements to allow us to enter the
+data into Wikidata. This is not the only approach, and the process can be further automated using "Wikidata bots".
+For this, see [Project 32](https://github.com/elixir-europe/biohackathon-projects-2021/tree/main/projects/32):
+Connecting ELIXIR-related open data on Wikidata via WikiProject ELIXIR.
+
+
+
+
+
+
