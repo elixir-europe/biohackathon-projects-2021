@@ -23,6 +23,7 @@ GA4GH partnership
 ### Lead(s)
 
 Thanasis Vergoulis (vergoulis@athenarc.gr)
+Kostis Zagganas (zagganas@athenarc.gr)
 
 ## Expected outcomes
 
