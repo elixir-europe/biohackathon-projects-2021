@@ -46,7 +46,7 @@ David Salgado, david.salgado@univ-amu.fr
 - [Using Galaxy and Managing your Data](https://training.galaxyproject.org/training-material/topics/galaxy-interface/)
 - [Contributing to the Galaxy Training Material](https://training.galaxyproject.org/training-material/topics/contributing/)
 - [Creating, Editing and Importing Galaxy Workflows](https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/workflow-editor/tutorial.html)
-- GTN material - Identification of somatic and germline variants from tumor and normal sample pairs (https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/somatic-variants/tutorial.html)
+- [GTN material - Identification of somatic and germline variants from tumor and normal sample pairs](https://training.galaxyproject.org/training-material/topics/variant-analysis/tutorials/somatic-variants/tutorial.html)
 - [Gitpod Automated Dev Environment](https://www.gitpod.io)
 
 Our project will be focusing on hCNV Galaxy training and workflows development so please familiarise yourself with the [Galaxy platform](https://usegalaxy.eu) and useful links in advance. 
