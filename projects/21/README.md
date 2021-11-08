@@ -45,5 +45,10 @@ Andra Waagmeester (andra@micel.io)
 Domain experts who want to define some domain of interest from a knowledge graph
 Developers who want to help with the implementation
 
+## Notes
+
+We keep this [hackmd](https://hackmd.io/QI5KK1ecQICgGERmSj981g) for notes as well as this [github repo](https://github.com/kg-subsetting/biohackathon2021) for specific code/scripts/data.
+
+
 **Number of expected hacking days**: 4
 
