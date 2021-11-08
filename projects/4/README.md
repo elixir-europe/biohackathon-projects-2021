@@ -1,5 +1,12 @@
 # Project 4: Highlight your data management tool assembly in the RDMkit!
 
+## CONNECTION INFO
+
+- Our Agenda and rolling minuts can be found [here](https://docs.google.com/document/d/1pH9kA5X06Kt5NQFaAqkVggelupi3w8ixpZeU5iYc-fs/edit#).
+- Chat with us on [slack](https://biohackeu.slack.com/archives/C02HXD60Z6F)
+- Contribute trough [GitHub](https://github.com/elixir-europe/rdmkit)
+- [Our website](https://rdmkit.elixir-europe.org) 
+
 ## Abstract
 
 The ELIXIR Research Data Management Kit (RDMkit) aims to help researchers and data stewards with DM problems by providing effective guidelines and tools. RDMkit is being developed in the context of the ELIXIR-CONVERGE project which aims to connect and align ELIXIR Nodes to deliver sustainable FAIRdata management services.
