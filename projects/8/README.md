@@ -24,9 +24,11 @@ GA4GH partnership
  * p.kensche@dkfz-heidelberg.de
  * alexander.kanitz@unibas.ch
 
+Best is if you reach out to us on the BioHackathon Slack, [channel 08_weskit](https://biohackeu.slack.com/archives/C02HQM9GT3Q)!
+
 ## Expected outcomes
 
-Possible work topics include the implementation of GA4GH Passport-based access control for data and compute resources, the operationalization of task distribution/federation, the addition of GA4GH APIs into existing solutions developed by BioHackathon participants, and the deployment and registration of services across (additional) ELIXIR nodes.
+Possible work topics include the implementation of GA4GH Passport-based access control for data and compute resources, the operationalization of task distribution/federation, the addition of GA4GH APIs into existing solutions developed by BioHackathon participants, and the deployment and registration of services across (additional) ELIXIR nodes. For concrete outcomes at this hackathon, we are planning to build/deploy a landing page for the ELIXIR Cloud & AAI project, as well as a registry for compatible services.
 
 We will also improve specifically WESkit on several aspects to improve its usability, interoperability, and integration. Open topics are 1.) implementing additional GA4GH standards such as Data Repository Service (DRS) and Tool Registry Service (TRS), 2.) closer integration of WESkit into the ELIXIR cloud framework, e.g. by using ELIXIR AAI for user management, and 3.) supporting additional workflow languages such as CWL, Luigi or WDL.
 
@@ -38,7 +40,9 @@ ELIXIR-AAI experts, GA4GH DRS and TRS user and developer, workflow developer, py
 
 ## Further project information
 
-Information about the ELIXIR Cloud & AAI initiative initiative can be found on this [website](https://elixir-europe.github.io/cloud/) and at our [github organization](https://github.com/elixir-cloud-aai).
+Please have a look at the [slide deck](https://docs.google.com/presentation/d/1SPGa0IPsnLoTYHgMjCbbXcM8R9iPm5bB9moN_3vWx_Y/edit) we prepared for the BioHackathon.
+
+More information about the ELIXIR Cloud & AAI initiative initiative can be found on this [website](https://elixir-europe.github.io/cloud/) and at our [github organization](https://github.com/elixir-cloud-aai).
 
 WESkit code development will be done in the WESkit Gitlab Repositories. The [Gitlab project group](https://gitlab.com/one-touch-pipeline/weskit) contains repositories specifically for the [WES-API service](https://gitlab.com/one-touch-pipeline/weskit/api), [Documentation](https://gitlab.com/one-touch-pipeline/weskit/documentation), and [deployment](https://gitlab.com/one-touch-pipeline/weskit/deployment).
 
