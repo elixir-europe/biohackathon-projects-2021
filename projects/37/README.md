@@ -1,5 +1,9 @@
 # Project 37: Support for the Common Workflow Language version 1.2 in Galaxy
 
+# Chat room
+
+https://matrix.to/#/#galaxy-cwl:matrix.org
+
 ## Abstract
 
 Computational pipelines have become ubiquitous in bioinformatics, with an increasing need for sharing them among researchers in portable formats like the Common Workflow Language (CWL).
