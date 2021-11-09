@@ -71,3 +71,13 @@ Participants of this topic are projected to include the ontology expert topic le
 5) Merchant’s example data: [Wine list (Merchant example)](https://docs.google.com/spreadsheets/d/1GI0dix_6-Wbl542YOdZ6EcxsW7UN8rEpfSXKSyE_5dk/edit#gid=0)
 #
 ![draft0.1 overview](https://github.com/elixir-europe/biohackathon-projects-2021/blob/99cb70c11d15d650a6b814e2e7cd2875b17aec2f/projects/16/images/foodOnWine.jpeg)
+
+![draft0.1 wine by maceration](https://github.com/elixir-europe/biohackathon-projects-2021/blob/99cb70c11d15d650a6b814e2e7cd2875b17aec2f/projects/16/images/FoodOn_maceration.jpeg)
+
+![draft0.1 maceration process](https://github.com/elixir-europe/biohackathon-projects-2021/blob/99cb70c11d15d650a6b814e2e7cd2875b17aec2f/projects/16/images/FoodOn_macerationprocess.jpeg)
+
+![draft0.1 pre-maceration](https://github.com/elixir-europe/biohackathon-projects-2021/blob/99cb70c11d15d650a6b814e2e7cd2875b17aec2f/projects/16/images/FoodOn_premaceration.jpeg)
+
+![draft0.1 fermentation](https://github.com/elixir-europe/biohackathon-projects-2021/blob/99cb70c11d15d650a6b814e2e7cd2875b17aec2f/projects/16/images/FoodOn_fermentationAll.jpeg)
+
+![draft0.1 wine characteristic](https://github.com/elixir-europe/biohackathon-projects-2021/blob/99cb70c11d15d650a6b814e2e7cd2875b17aec2f/projects/16/images/FoodOn_wineCharacteristic.jpeg)
