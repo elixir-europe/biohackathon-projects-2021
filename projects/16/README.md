@@ -70,4 +70,4 @@ Participants of this topic are projected to include the ontology expert topic le
 4) Hackathon Slide Show: [Project 16: Progress & update](https://docs.google.com/presentation/d/1l6aN6u-t3C73OtJa-jLxED4pDyI-PGCUwrbBEGaC2tA/edit#slide=id.p) 
 5) Merchant’s example data: [Wine list (Merchant example)](https://docs.google.com/spreadsheets/d/1GI0dix_6-Wbl542YOdZ6EcxsW7UN8rEpfSXKSyE_5dk/edit#gid=0)
 #
-[https://github.com/elixir-europe/biohackathon-projects-2021/blob/99cb70c11d15d650a6b814e2e7cd2875b17aec2f/projects/16/images/foodOnWine.jpeg]
+![https://github.com/elixir-europe/biohackathon-projects-2021/blob/99cb70c11d15d650a6b814e2e7cd2875b17aec2f/projects/16/images/foodOnWine.jpeg]
