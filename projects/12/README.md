@@ -15,12 +15,12 @@ Biodiversity
 **EasyChair Number:** 19
 
 ## Team
-Henry Engledow, henry.engledow@plantentuinmeise.be
-Lien Reyserhove lien.reyserhove@inbo.be 
-Maarten Trekels, maarten.trekels@plantentuinmeise.be
-Pieter Huybrechts, pieter.huybrechts@plantentuinmeise.be
-Sofie Meeus sofie.meeus@plantentuinmeise.be 
-Tom August tomaug@ceh.ac.uk
+* Henry Engledow, henry.engledow@plantentuinmeise.be
+* Lien Reyserhove lien.reyserhove@inbo.be 
+* Maarten Trekels, maarten.trekels@plantentuinmeise.be
+* Pieter Huybrechts, pieter.huybrechts@plantentuinmeise.be
+* Sofie Meeus sofie.meeus@plantentuinmeise.be 
+* Tom August tomaug@ceh.ac.uk
 
 ### Lead(s)
 
