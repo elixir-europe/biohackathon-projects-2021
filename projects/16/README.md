@@ -69,3 +69,5 @@ Participants of this topic are projected to include the ontology expert topic le
 3) FoodOn existing fundamental [FoodOn Robot Tables](https://docs.google.com/spreadsheets/d/1VJtz4m67tdUNDqRe3m1Okdxll64nTR46GSvCOmb0APE/edit#gid=0) that includes plant x taxonomy food references for “[grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003417)”, “[red grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003778)”, “[white grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003777)”, “[black grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003610)”, “[grape bunch](http://purl.obolibrary.org/obo/FOODON_00003638)”, “grape leaf (whole)”.
 4) Hackathon Slide Show: [Project 16: Progress & update](https://docs.google.com/presentation/d/1l6aN6u-t3C73OtJa-jLxED4pDyI-PGCUwrbBEGaC2tA/edit#slide=id.p) 
 5) Merchant’s example data: [Wine list (Merchant example)](https://docs.google.com/spreadsheets/d/1GI0dix_6-Wbl542YOdZ6EcxsW7UN8rEpfSXKSyE_5dk/edit#gid=0)
+#
+![alt text](https://drive.google.com/file/d/1kcJ2OPcUEv6RLzBkxUafW1pEWpXg-nQn/view?usp=sharing)
