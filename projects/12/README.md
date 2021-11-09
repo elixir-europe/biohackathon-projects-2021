@@ -21,6 +21,7 @@ Biodiversity
 * Pieter Huybrechts, pieter.huybrechts@plantentuinmeise.be
 * Sofie Meeus sofie.meeus@plantentuinmeise.be 
 * Tom August tomaug@ceh.ac.uk
+* Nikolas Pechlivanis nikosp41@certh.gr
 
 ### Lead(s)
 
