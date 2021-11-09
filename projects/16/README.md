@@ -64,8 +64,8 @@ Participants of this topic are projected to include the ontology expert topic le
 
 
 ## Live update
-⋅⋅* Diagrams.net wine ontology diagram for JOINT LIVE EDITING - you may need to press “synchronize” occasionally: [foodon_wine.drawio](https://drive.google.com/file/d/1-jHjnJ5njPggPh0MlhnrF51RZ9OFpYK2) (contact Damion for editing rights via google account).
-⋅⋅* FoodOn existing [FoodOn Wine](https://docs.google.com/spreadsheets/d/1jcZtqoN-C75d4OCPUomtp5xNbqjLweoooSVqpK3XHSY/edit#gid=0) spreadsheet of main wine varieties
-⋅⋅* FoodOn existing fundamental [FoodOn Robot Tables](https://docs.google.com/spreadsheets/d/1VJtz4m67tdUNDqRe3m1Okdxll64nTR46GSvCOmb0APE/edit#gid=0) that includes plant x taxonomy food references for “[grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003417)”, “[red grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003778)”, “[white grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003777)”, “[black grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003610)”, “[grape bunch](http://purl.obolibrary.org/obo/FOODON_00003638)”, “grape leaf (whole)”.
-⋅⋅* Hackathon Slide Show: [Project 16: Progress & update](https://docs.google.com/presentation/d/1l6aN6u-t3C73OtJa-jLxED4pDyI-PGCUwrbBEGaC2tA/edit#slide=id.p) 
-⋅⋅* Merchant’s example data: [Wine list (Merchant example)](https://docs.google.com/spreadsheets/d/1GI0dix_6-Wbl542YOdZ6EcxsW7UN8rEpfSXKSyE_5dk/edit#gid=0)
+1) Diagrams.net wine ontology diagram for JOINT LIVE EDITING - you may need to press “synchronize” occasionally: [foodon_wine.drawio](https://drive.google.com/file/d/1-jHjnJ5njPggPh0MlhnrF51RZ9OFpYK2) (contact Damion for editing rights via google account).
+2) FoodOn existing [FoodOn Wine](https://docs.google.com/spreadsheets/d/1jcZtqoN-C75d4OCPUomtp5xNbqjLweoooSVqpK3XHSY/edit#gid=0) spreadsheet of main wine varieties
+3) FoodOn existing fundamental [FoodOn Robot Tables](https://docs.google.com/spreadsheets/d/1VJtz4m67tdUNDqRe3m1Okdxll64nTR46GSvCOmb0APE/edit#gid=0) that includes plant x taxonomy food references for “[grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003417)”, “[red grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003778)”, “[white grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003777)”, “[black grape (whole)](http://purl.obolibrary.org/obo/FOODON_00003610)”, “[grape bunch](http://purl.obolibrary.org/obo/FOODON_00003638)”, “grape leaf (whole)”.
+4) Hackathon Slide Show: [Project 16: Progress & update](https://docs.google.com/presentation/d/1l6aN6u-t3C73OtJa-jLxED4pDyI-PGCUwrbBEGaC2tA/edit#slide=id.p) 
+5) Merchant’s example data: [Wine list (Merchant example)](https://docs.google.com/spreadsheets/d/1GI0dix_6-Wbl542YOdZ6EcxsW7UN8rEpfSXKSyE_5dk/edit#gid=0)
