@@ -61,4 +61,4 @@ We expect both Schema markup makers as well as R2RML, RDF and SPARQL service dev
 ## Notes
 
 * [Swiss Lipid IDs in Wikidata](SwissLipid-in-Wikidata.md) (together with Project 32)
-* 
+* [running notes](https://docs.google.com/document/d/1fr6m1KvrVkisBF17VNgmElpccBYnAwToRcF2ES3W1_8/edit?usp=sharing)
