@@ -53,5 +53,5 @@ We are planning to attend with 6-7 people and would be happy to welcome 2-3 more
 
 ## Resources
 
-- repository for isa4j-miappe: https://github.com/IPK-BIT/isa4j-miappe 
+- repository for isa4j: https://github.com/IPK-BIT/isa4j . The extension is being developed in the [miappe](https://github.com/IPK-BIT/isa4j/tree/miappe) branch
 
