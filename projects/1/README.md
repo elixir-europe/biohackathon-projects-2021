@@ -18,15 +18,15 @@ at the 2020 online ELIXIR biohackathon.
 
 ## Topics
 
-Tools Platform
-
-**Project Number:** 1
-
-
-
-**EasyChair Number:** 2
+The active paper.md report as a BioHackrXiv draft publication can be found [here](https://github.com/biohackrxiv/bhxiv-metadata/blob/main/doc/elixir_biohackathon2021/paper.md)
 
 ## Team
+
+* Tazro
+* Egon
+* Pjotr
+* Leyla
+* Andrea
 
 ### Lead(s)
 
@@ -41,4 +41,3 @@ Enhanced submission and search for BioHackrXiv.
 2
 
 **Number of expected hacking days**: 4
-
