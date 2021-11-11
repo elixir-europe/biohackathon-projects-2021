@@ -27,6 +27,13 @@ Tools Platform
 Maxat Kulmanov, maxat.kulmanov@kaust.edu.sa
 Leyla Jael Castro, ljgarcia@zbmed.de
 
+### Members
+Fernando Zhapa-Camacho, fernando.zhapacamacho@kaust.edu.sa
+Marco Anteghini, marco.anteghini@wur.nl
+Carsten Jahn, carsten.jahn@bayer.com
+Sonja Katz, sonja.katz@wur.nl
+Francesco Gualdi, fgualdi@imim.es
+
 ## Expected outcomes
 
 A library and toolkit, together with a set of biomedical use cases/examples and documentation. It is expected to be done in 4 days.
@@ -49,3 +56,6 @@ Skills needed:
 
 **Number of expected hacking days**: 4 days
 
+## Paper
+
+The active paper.md report as a BioHackrXiv draft publication can be found [here](https://github.com/bio-ontology-research-group/elixir_biohackathon2021/paper.md)
