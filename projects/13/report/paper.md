@@ -9,7 +9,7 @@ tags:
   - Disease Maps
 authors:
   - name: Thijs van Beek
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0002-8283-7204
     affiliation: 1
   - name: David Hoksza
     orcid: 0000-0003-4679-0557
