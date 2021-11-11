@@ -20,6 +20,9 @@ authors:
   - name: Caroline Gaud
     orcid: 0000-0002-0453-9260
     affiliation: 4
+  - name: Nils Hoffmann
+    orcid: 0000-0002-6540-6875
+    affiliation: 5
 
 affiliations:
  - name: Swiss-Prot Group, Swiss Institute of Bioinformatics, rue Michel Servet 1, CH 1211 Geneva 4, Switzerland
@@ -29,8 +32,10 @@ affiliations:
  - name: LIPID MAPS, Systems Immunity Research Institute, Cardiff Univeristy, Cardiff, UK
    index: 3
  - name: LIPID MAPS, Bioinformatics Group, Babraham Institute, Babraham Research Campus, Cambridge, UK
-   index: 4
-   
+   index: 4  
+ - name: Center for Biotechnology, Bielefeld University, Universitätsstraße 27, 33615 Bielefeld, Germany
+   index: 5
+
 date: 11 November 2021
 bibliography: paper.bib
 authors_short: FAIR Lipids team
@@ -43,6 +48,7 @@ event: BioHackathon Europe 2021
 Data in the lipid world, while free to access suffers from a number of technical barriers 
 to being truly Interoperable in and Accessible in the FAIR sense. This makes it harder
 to Reuse these resources.
+
 
 Team members of SwissLipids, IDSM, MolMedDB, Rhea, UniProt, LIPID MAPS joined by volunteers
 met virtually at the Biohackathon Europe 2021 to challenge these technical barriers.
@@ -104,6 +110,8 @@ The Rhea contribution was funded by the Swiss State Secretariat for Education, R
 The LIPID MAPS team was funded by the Wellcome Trust, UK.
 
 The UniProt contribution was supported by UniProt by the National Eye Institute (NEI), National Human Genome Research Institute (NHGRI), National Heart, Lung, and Blood Institute (NHLBI), National Institute on Aging (NIA), National Institute of Allergy and Infectious Diseases (NIAID), National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), National Institute of General Medical Sciences (NIGMS), National Institute of Mental Health (NIMH), and National Cancer Institute (NCI) of the National Institutes of Health (NIH) under grant U24HG007822. Additional support for the EMBL-EBI's involvement in UniProt comes from European Molecular Biology Laboratory (EMBL) core funds, the Alzheimer's Research UK (ARUK) grant ARUK-NAS2017A-1, the Biotechnology and Biological Sciences Research Council (BBSRC) [BB/T010541/1] and Open Targets. UniProt activities at the SIB are additionally supported by the Swiss Federal Government through the State Secretariat for Education, Research and Innovation SERI. PIR's UniProt activities are also supported by the NIH grants R01GM080646, G08LM010720, and P20GM103446, and the National Science Foundation (NSF) grant DBI-1062520.
+
+N. H. acknowledges funding from the Federal Ministry of Education and Research in Germany (BMBF) (grant number: FKZ 031A532B).
 
 # References
 
