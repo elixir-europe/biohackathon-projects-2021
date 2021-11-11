@@ -16,9 +16,9 @@ Tools Platform
 
 **Project Number:** 13
 
-
-
 **EasyChair Number:** 20
+
+The active paper.md report as a BioHackrXiv draft publication can be found [here](https://github.com/mjostaszewski/BH21-BioHAckrXiv-paper/blob/main/report/paper.md)
 
 ## Team
 
