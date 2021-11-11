@@ -6,13 +6,13 @@ tags:
   - Schema.org
   - Bioschemas
 authors:
-  - name: Alasdair J. G. Gray
-    orcid: 876
+  - name: Alasdair Gray
+    orcid: 0000-0002-5711-4872
     affiliation: 1
   
 
 affiliations:
- - name: qjshdg 
+ - name: Heriot-Watt University, Edinburgh, UK
    index: 1
 
 date: 11 November 2021
@@ -24,6 +24,10 @@ event: BioHackathon Europe 2021
 
 # Introduction
 
+# Data Harvesting
+
+# Data Analysis
+
 
 # Discussion and/or Conclusion
 
@@ -33,6 +37,8 @@ event: BioHackathon Europe 2021
 
 # Jupyter notebooks, GitHub repositories and data repositories
 
+* GitHub repository: https://github.com/BioSchemas/bioschemas-data-harvesting
+* Jupyter Notebooks: https://github.com/BioSchemas/bioschemas-data-harvesting/blob/main/AnalysisQueries.ipynb
 
 # Acknowledgements
 
