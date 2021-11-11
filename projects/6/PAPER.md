@@ -38,6 +38,9 @@ authors:
   - name: Venkatesh Muthukrishnan
     orcid: 0000-0003-0943-6401
     affiliation: 1
+  - name: Maksim Kolchin
+    orcid: 0000-0002-3851-9874
+    affiliation: 7
 
 affiliations:
  - name: Swiss-Prot Group, Swiss Institute of Bioinformatics, rue Michel Servet 1, CH 1211 Geneva 4, Switzerland
@@ -52,7 +55,8 @@ affiliations:
    index: 6
  - name: Faculty of Science, Palacký University, 17. listopadu 1192/12, 779 00, Olomouc, Czech Republic
    index: 5
-
+ - name: Boehringer Ingelheim España S.A., Sant Cugat del Vallès, Spain
+   index: 7
 date: 11 November 2021
 bibliography: paper.bib
 authors_short: FAIR Lipids team
@@ -132,5 +136,5 @@ N. H. acknowledges funding from the Federal Ministry of Education and Research i
 
 # References
 
-Leave thise section blank, create a paper.bib with all your references.
+Leave this section blank, create a paper.bib with all your references.
 
