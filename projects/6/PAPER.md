@@ -11,12 +11,17 @@ authors:
   - name: Jakub Galgonek 
     orcid: 0000-0002-7038-544X
     affiliation: 2
+  - name: Dominik Martinát
+    orcid: 0000-0001-6611-7883
+    affiliation: 3
 
 affiliations:
  - name: Swiss-Prot Group, Swiss Institute of Bioinformatics, rue Michel Servet 1, CH 1211 Geneva 4, Switzerland
    index: 1
  - name: Institute of Organic Chemistry and Biochemistry of the CAS, Flemingovo náměstí 2, 166 10, Prague 6, Czech Republic
    index: 2
+ - name: Faculty of Science, Palacký University, 17. listopadu 1192/12, 779 00, Olomouc, Czech Republic
+   index: 3
 date: 11 November 2021
 bibliography: paper.bib
 authors_short: FAIR Lipids team
