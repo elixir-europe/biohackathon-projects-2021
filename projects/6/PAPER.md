@@ -20,7 +20,7 @@ affiliations:
    index: 1
  - name: Institute of Organic Chemistry and Biochemistry of the CAS, Flemingovo náměstí 2, 166 10, Prague 6, Czech Republic
    index: 2
- - name: Boehringer Ingelheim España S.A., Spain
+ - name: Boehringer Ingelheim España S.A., Sant Cugat del Vallès, Spain
    index: 3
 date: 11 November 2021
 bibliography: paper.bib
@@ -93,8 +93,6 @@ The SwissLipids team was funded by the Swiss State Secretariat for Education, Re
 The Rhea contribution was funded by the Swiss State Secretariat for Education, Research and Innovation through the Swiss Institute of Bioinformatics.
 
 The UniProt contribution was supported by UniProt by the National Eye Institute (NEI), National Human Genome Research Institute (NHGRI), National Heart, Lung, and Blood Institute (NHLBI), National Institute on Aging (NIA), National Institute of Allergy and Infectious Diseases (NIAID), National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), National Institute of General Medical Sciences (NIGMS), National Institute of Mental Health (NIMH), and National Cancer Institute (NCI) of the National Institutes of Health (NIH) under grant U24HG007822. Additional support for the EMBL-EBI's involvement in UniProt comes from European Molecular Biology Laboratory (EMBL) core funds, the Alzheimer's Research UK (ARUK) grant ARUK-NAS2017A-1, the Biotechnology and Biological Sciences Research Council (BBSRC) [BB/T010541/1] and Open Targets. UniProt activities at the SIB are additionally supported by the Swiss Federal Government through the State Secretariat for Education, Research and Innovation SERI. PIR's UniProt activities are also supported by the NIH grants R01GM080646, G08LM010720, and P20GM103446, and the National Science Foundation (NSF) grant DBI-1062520.
-
-Contribution of Maksim Kolchin was sponsored by Boehringer Ingelheim España S.A.
 
 # References
 
