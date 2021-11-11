@@ -16,13 +16,16 @@ authors:
     affiliation: 3
   - name: Karla Mendvelso
     orcid: 0000-xxxx-xxxx-xxxx
-    affiliation: 3
+    affiliation: 4
   - name: Caroline Gaud
     orcid: 0000-0002-0453-9260
     affiliation: 4
+  - name: Dominik Martinát
+    orcid: 0000-0001-6611-7883
+    affiliation: 5
   - name: Nils Hoffmann
     orcid: 0000-0002-6540-6875
-    affiliation: 5
+    affiliation: 6
 
 affiliations:
  - name: Swiss-Prot Group, Swiss Institute of Bioinformatics, rue Michel Servet 1, CH 1211 Geneva 4, Switzerland
@@ -34,6 +37,8 @@ affiliations:
  - name: LIPID MAPS, Bioinformatics Group, Babraham Institute, Babraham Research Campus, Cambridge, UK
    index: 4  
  - name: Center for Biotechnology, Bielefeld University, Universitätsstraße 27, 33615 Bielefeld, Germany
+   index: 6
+ - name: Faculty of Science, Palacký University, 17. listopadu 1192/12, 779 00, Olomouc, Czech Republic
    index: 5
 
 date: 11 November 2021
