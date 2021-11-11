@@ -83,6 +83,14 @@ Please keep sections to a maximum of three levels, even better if only two level
 The following bit is about the LIPID MAPS resource .... (feel free to edit or move to another section)
 A LIPID MAPS SPRQL endpoint was configured and published (NOTE!! not yet live - check first - https://www.lipidmaps.org/sparql) using Apache Fuseki, alongside the LIPID MAPS classification as an RDF.
 
+
+Bit about MolMeDB. Feel free to edit or move it too
+
+The mapping of the MolMeDB database into the RDF dataset has been created mostly relying on the BioAssay Ontology (BAO) and the Chemical Information Ontology (CHEMINF). Substances present in the MolMeDB database have been linked into PubChem, ChEBI, ChEMBL and PDB databases via the skos:exactMatch property. Some membrane models have been linked to their components in the ChEBI database via the bao:BAO_0090004 (has part) property. Linking of transporter assay targets to the UniProt database has been made directly by using UniProt IRIs. All these mentioned links allow for easy federated querying across all the mentioned databases.
+
+The prototype of the MolMeDB SPARQL endpoint has been implemented using the IDSM SPARQL engine, and it is available at https://idsm.elixir-czech.cz/sparql/endpoint/molmedb.
+
+
 turning the
 ### Subsection level 3
 
@@ -120,9 +128,16 @@ And maybe you want to add a sentence or two on how you plan to continue. Please 
 
 For citations of references, we prefer the use of parenthesis, last name and year. If you use a citation manager, Elsevier – Harvard or American Psychological Association (APA) will work. If you are referencing web pages, software or so, please do so in the same way. Whenever possible, add authors and year. We have included a couple of citations along this document for you to get the idea. Please remember to always add DOI whenever available, if not possible, please provide alternative URLs. You will end up with an alphabetical order list by authors’ last name.
 
+
+Bit about future of MolMeDB RDF. Feel free to edit or move it too. Or even to scrapt it if it won't fit.
+
+The MolMeDB RDF dataset and the related SPARQL endpoint introduced as result of Biohackaton Europe 21 is at a prototype stage. It will be further developed to encompass a wider variety of data present in MolMeDB and to facilitate more possibilities of query federation.
+
 # Jupyter notebooks, GitHub repositories and data repositories
 
 * https://github.com/lifs-tools/goslin-sparql/
+
+* https://github.com/DominikMartinat/rdf-mmdb
 
 # Acknowledgements
 
