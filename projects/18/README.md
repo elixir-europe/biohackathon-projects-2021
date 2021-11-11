@@ -47,3 +47,6 @@ We have several people (namely Vilém Děd, Nene Djenaba Barry, Jacek Lebioda, B
 
 **Number of expected hacking days**: 4
 
+## Resources
+
+The active paper.md report as a BioHackrXiv draft publication can be found [here](https://github.com/ds-wizard/bh2021-report).
