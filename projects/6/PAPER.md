@@ -26,6 +26,18 @@ authors:
   - name: Nils Hoffmann
     orcid: 0000-0002-6540-6875
     affiliation: 6
+  - name: Anne Morgat
+    orcid: 0000-0002-1216-2969
+    affiliation: 1
+  - name: Parit Bansal
+    orcid: 0000-0002-0875-1680
+    affiliation: 1
+  - name: Lucila Aimo
+    orcid: 0000-0003-0943-6401
+    affiliation: 1
+  - name: Venkatesh Muthukrishnan
+    orcid: 0000-0003-0943-6401
+    affiliation: 1
 
 affiliations:
  - name: Swiss-Prot Group, Swiss Institute of Bioinformatics, rue Michel Servet 1, CH 1211 Geneva 4, Switzerland
