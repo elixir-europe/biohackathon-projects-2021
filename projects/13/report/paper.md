@@ -1,6 +1,45 @@
-# Project 13: Integration of visualisation tools for disease mechanisms and their annotations
+---
+title: 'Integration of visualisation tools for disease mechanisms and their annotations: UniProt, Nightingale and the MINERVA Platform'
+title_short: 'Integration of UniProt, Nightingale and Disease Maps'
+tags:
+  - visualisation
+  - protein databases
+  - UniProt
+  - Nightingale
+  - Disease Maps
+authors:
+  - name: Thijs van Beek
+    orcid: 0000-0000-0000-0000
+    affiliation: 1
+  - name: David Hoksza
+    orcid: 0000-0003-4679-0557
+    affiliation: 2
+  - name: Piotr Gawron
+    orcid: 0000-0002-9328-8052
+    affiliation: 1
+  - name: Marek Ostaszewski
+    affiliation: 1
+    orcid: 0000-0003-1473-370X
+  - name: Xavier Watkins
+    orcid: 0000-0001-9327-5887
+    affiliation: 3
+affiliations:
+  - name: LCSB, University of Luxembourg, Luxembourg
+    index: 1
+  - name: Charles University, Prague, Czech Republic
+    index: 2
+  - name: European Bioinformatics Institute, Canbridge, UK
+    index: 3
+date: 11 November 2021
+bibliography: paper.bib
+event: lamola2021
+biohackathon_name: "BioHackathon Europe"
+biohackathon_url:   "https://biohackathon-europe.org"
+biohackathon_location: "La Mola, Spain 2021"
+group: Logic programming group
+---
 
-## Abstract
+# Abstract
 
 We will integrate resources enabling the visual exploration of the mechanisms of diseases across different levels - gene/protein annotation, 
 protein-protein interaction, pathways and genomic variation. Disease maps (disease-maps.org) provide a standardised, diagrammatic way to encode mechanisms of 
