@@ -13,6 +13,9 @@ authors:
     affiliation: 2
   - name: Dominik Martinát
     orcid: 0000-0001-6611-7883
+    affiliation: 5
+  - name: Nils Hoffmann
+    orcid: 0000-0002-6540-6875
     affiliation: 3
 
 affiliations:
@@ -20,8 +23,10 @@ affiliations:
    index: 1
  - name: Institute of Organic Chemistry and Biochemistry of the CAS, Flemingovo náměstí 2, 166 10, Prague 6, Czech Republic
    index: 2
- - name: Faculty of Science, Palacký University, 17. listopadu 1192/12, 779 00, Olomouc, Czech Republic
+ - name: Center for Biotechnology, Bielefeld University, Universitätsstraße 27, 33615 Bielefeld, Germany
    index: 3
+ - name: Faculty of Science, Palacký University, 17. listopadu 1192/12, 779 00, Olomouc, Czech Republic
+   index: 5
 date: 11 November 2021
 bibliography: paper.bib
 authors_short: FAIR Lipids team
@@ -35,7 +40,7 @@ Data in the lipid world, while free to access suffers from a number of technical
 to being truly Interoperable in and Accessible in the FAIR sense. This makes it harder
 to Reuse these resources.
 
-Team members of SwissLipids, IDSM, MolMedDB, Rhea, UniProt, LipidMaps joined by volunteers
+Team members of SwissLipids, IDSM, MolMedDB, Rhea, UniProt, LIFS and LipidMaps joined by volunteers
 met virtually at the Biohackathon Europe 2021 to challenge these technical barriers.
 Critically we implemented W3C standards for interopable knowledgeraph databases using SPARQL 
 and prior existing ontologies and schemas such as ChEBI and the Biological Assay Ontology.
@@ -93,6 +98,8 @@ The SwissLipids team was funded by the Swiss State Secretariat for Education, Re
 The Rhea contribution was funded by the Swiss State Secretariat for Education, Research and Innovation through the Swiss Institute of Bioinformatics.
 
 The UniProt contribution was supported by UniProt by the National Eye Institute (NEI), National Human Genome Research Institute (NHGRI), National Heart, Lung, and Blood Institute (NHLBI), National Institute on Aging (NIA), National Institute of Allergy and Infectious Diseases (NIAID), National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK), National Institute of General Medical Sciences (NIGMS), National Institute of Mental Health (NIMH), and National Cancer Institute (NCI) of the National Institutes of Health (NIH) under grant U24HG007822. Additional support for the EMBL-EBI's involvement in UniProt comes from European Molecular Biology Laboratory (EMBL) core funds, the Alzheimer's Research UK (ARUK) grant ARUK-NAS2017A-1, the Biotechnology and Biological Sciences Research Council (BBSRC) [BB/T010541/1] and Open Targets. UniProt activities at the SIB are additionally supported by the Swiss Federal Government through the State Secretariat for Education, Research and Innovation SERI. PIR's UniProt activities are also supported by the NIH grants R01GM080646, G08LM010720, and P20GM103446, and the National Science Foundation (NSF) grant DBI-1062520.
+
+N. H. acknowledges funding from the Federal Ministry of Education and Research in Germany (BMBF) (grant number: FKZ 031A532B).
 
 # References
 
