@@ -15,7 +15,7 @@ authors:
     orcid: 0000-0002-3491-2361
     affiliation: 3
   - name: Karla Mendvelso
-    orcid: 0000-xxxx-xxxx-xxxx
+    orcid: 0000-0002-5282-3995
     affiliation: 3
   - name: Caroline Gaud
     orcid: 0000-0002-0453-9260
@@ -67,7 +67,7 @@ event: BioHackathon Europe 2021
 # Introduction
 
 Data in the lipid world, while free to access suffers from a number of technical barriers 
-to being truly Interoperable in and Accessible in the FAIR sense. This makes it harder
+to being truly Interoperable and Accessible in the FAIR sense. This makes it harder
 to Reuse these resources.
 
 
@@ -80,6 +80,10 @@ and prior existing ontologies and schemas such as ChEBI and the Biological Assay
 
 Please keep sections to a maximum of three levels, even better if only two levels.
 
+The following bit is about the LIPID MAPS resource .... (feel free to edit or move to another section)
+A LIPID MAPS SPRQL endpoint was configured and published (NOTE!! not yet live - check first - https://www.lipidmaps.org/sparql) using Apache Fuseki, alongside the LIPID MAPS classification as an RDF.
+
+turning the
 ### Subsection level 3
 
 Please keep sections to a maximum of three levels.
