@@ -36,7 +36,7 @@ event: lamola2021
 biohackathon_name: "BioHackathon Europe"
 biohackathon_url:   "https://biohackathon-europe.org"
 biohackathon_location: "La Mola, Spain 2021"
-group: Logic programming group
+group: Project 13
 authors_short: Thijs van Beek \emph{et al.}
 ---
 
