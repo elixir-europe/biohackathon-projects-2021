@@ -37,6 +37,7 @@ biohackathon_name: "BioHackathon Europe"
 biohackathon_url:   "https://biohackathon-europe.org"
 biohackathon_location: "La Mola, Spain 2021"
 group: Logic programming group
+authors_short: Thijs van Beek \emph{et al.}
 ---
 
 # Abstract
