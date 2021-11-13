@@ -70,19 +70,14 @@ Data in the lipid world, while free to access suffers from a number of technical
 to being truly Interoperable and Accessible in the FAIR sense. This makes it harder
 to Reuse these resources.
 
-
 Team members of SwissLipids, IDSM, MolMedDB, Rhea, UniProt, LIPID MAPS joined by volunteers
-met virtually at the Biohackathon Europe 2021 to challenge these technical barriers.
-Critically we implemented W3C standards for interopable knowledgeraph databases using SPARQL 
+met virtually at the BioHackathon Europe 2021 to challenge these technical barriers.
+Critically we implemented W3C standards to enable interoperability of these public databases using SPARQL 
 and prior existing ontologies and schemas such as ChEBI and the Biological Assay Ontology.
 
-## Subsection level 2
+# RDFying databases
 
-Please keep sections to a maximum of three levels, even better if only two levels.
-
-The following bit is about the LIPID MAPS resource .... (feel free to edit or move to another section)
-A LIPID MAPS SPRQL endpoint was configured and published (NOTE!! not yet live - check first - https://www.lipidmaps.org/sparql) using Apache Fuseki, alongside the LIPID MAPS classification as an RDF.
-
+## MolMeDB
 
 Bit about MolMeDB. Feel free to edit or move it too
 
@@ -90,11 +85,44 @@ The mapping of the MolMeDB database into the RDF dataset has been created mostly
 
 The prototype of the MolMeDB SPARQL endpoint has been implemented using the IDSM SPARQL engine, and it is available at https://idsm.elixir-czech.cz/sparql/endpoint/molmedb.
 
+## LIPID MAPS
 
-turning the
-### Subsection level 3
+The LIPID MAPS® Structure Database (LMSD) [1] is a relational database encompassing structures 
+and annotations of biologically relevant lipids. As of today, LMSD contains 46430 unique lipid structures, 
+making it the largest public lipid-only database in the world.
 
-Please keep sections to a maximum of three levels.
+The decision to follow the approach based on the RDF Mapping Language (RML) [2] was chosen because:
+
+- LIPID MAPS database is hosted as a relational database, therefore it can be queried directly without 
+an intermediate step that does ETLing of data into a CSV file, for example, 
+- some LIPID MAPS data isn't the format that can be used as it is, therefore some transformations using SQL functions 
+were required, e.g. SwissLipid identifiers are stored as strings in `SLM:000000` format, although they need to be IRIs 
+in RDF data, therefore `REGEXP_REPLACE` was used to extract only digits after the colon (i.e. `:`) symbol.  
+
+An example RDF representing the `C10H19NO4` lipid (in RDF 1.1 Turtle format):
+
+```turtle
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/chebi/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lmontology: <https://www.lipidmaps.org/ontology/> .
+
+<https://www.lipidmaps.org/rdf/LMFA07070005> a owl:Class;
+    chebi:formula "C10H19NO4";
+    chebi:inchi "InChI=1S/C10H19NO4/c1-5-10(14)15-8(6-9(12)13)7-11(2,3)4/h8H,5-7H2,1-4H3/t8-/m1/s1";
+    chebi:inchikey "UFAHZIUFPNSHSL-MRVPVSSYSA-N";
+    chebi:monoisotopicmass 2.17131409E2;
+    rdfs:label "O-propanoyl-carnitine"@en;
+    rdfs:subClassOf <https://www.lipidmaps.org/rdf/category/10707>;
+    owl:equivalentClass <http://purl.obolibrary.org/obo/CHEBI_53210>, <https://swisslipids.org/rdf/SLM_000390084> ;
+    lmontology:abbrev "CAR 3:0" .
+```
+
+In addition to the lipids itself, we've RDFied the Lipids Categories as `owl:Class`es 
+and used `rdfs:subClassOf` relations to reproduce the hierarchy. 
+
+The RDF data is available through a SPARQL endpoint at https://www.lipidmaps.org/sparql. We employ Apache Fuseki here 
+to provide the SPARQL endpoint. 
 
 ## Tables, figures and so on
 
@@ -131,7 +159,7 @@ For citations of references, we prefer the use of parenthesis, last name and yea
 
 Bit about future of MolMeDB RDF. Feel free to edit or move it too. Or even to scrapt it if it won't fit.
 
-The MolMeDB RDF dataset and the related SPARQL endpoint introduced as result of Biohackaton Europe 21 is at a prototype stage. It will be further developed to encompass a wider variety of data present in MolMeDB and to facilitate more possibilities of query federation.
+The MolMeDB RDF dataset and the related SPARQL endpoint introduced as result of BioHackaton Europe 21 is at a prototype stage. It will be further developed to encompass a wider variety of data present in MolMeDB and to facilitate more possibilities of query federation.
 
 # Jupyter notebooks, GitHub repositories and data repositories
 
@@ -156,4 +184,8 @@ N. H. acknowledges funding from the Federal Ministry of Education and Research i
 # References
 
 Leave this section blank, create a paper.bib with all your references.
+
+1. LIPID MAPS® Structure Database (LMSD)
+LMSD: LIPID MAPS® structure database. Sud M., Fahy E., Cotter D., Brown A., Dennis E., Glass C., Murphy R., Raetz C., Russell D., and Subramaniam S., Nucleic Acids Research 35, D527-32 (2006)
+2. Dimou, A., Vander Sande, M., Colpaert, P., Verborgh, R., Mannens, E., & Van de Walle, R. (2014, January). RML: a generic language for integrated RDF mappings of heterogeneous data. In Ldow.
 
