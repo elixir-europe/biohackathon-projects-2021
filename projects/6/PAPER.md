@@ -53,7 +53,7 @@ affiliations:
    index: 4  
  - name: Center for Biotechnology, Bielefeld University, Universitätsstraße 27, 33615 Bielefeld, Germany
    index: 6
- - name: Faculty of Science, Palacký University, 17. listopadu 1192/12, 779 00, Olomouc, Czech Republic
+ - name: Department of Biochemistry, Faculty of Science, Palacký University Olomouc, 17. listopadu 1192/12, 779 00, Olomouc, Czech Republic
    index: 5
  - name: Boehringer Ingelheim España S.A., Sant Cugat del Vallès, Spain
    index: 7
