@@ -60,3 +60,41 @@ Life Science
 
 **Number of expected hacking days**: 4
 
+## Documentation
+
+### Scripts
+
+Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Example script to get HCLS metadata for the Bio2RDF SPARQL endpoint from the Shapes of You triplestore:
+
+```bash
+python3 scripts/get_metadata.py
+```
+
+Example script to compute HCLS metadata for the Drugbank graph in the Bio2RDF SPARQL endpoint :
+
+```bash
+python3 scripts/construct_metadata.py
+```
+
+### API
+
+Start the API locally after installing the dependencies:
+
+```bash
+uvicorn api.main:app --reload
+```
+
+Or start it with docker:
+
+```bash
+docker-compose up
+```
+
+Access it on http://localhost:8000/docs
+
