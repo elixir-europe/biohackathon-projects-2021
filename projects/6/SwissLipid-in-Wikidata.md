@@ -51,7 +51,8 @@ For this, see [Project 32](https://github.com/elixir-europe/biohackathon-project
 Connecting ELIXIR-related open data on Wikidata via WikiProject ELIXIR.
 
 Based on existing Bacting scripts, a script is created to take the `swisslipids_ids.tsv` file as input and create
-QuickStatements: [https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy](https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy)
+QuickStatements: [https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy](https://github.com/egonw/ons-wikidata/blob/master/ExtIdentifiers/swisslipids.groovy) This script is using [Apache Groovy](http://www.groovy-lang.org/)
+but Bacting can also be using in Python, see [https://github.com/cthoyt/pybacting](https://github.com/cthoyt/pybacting).
 
 This script uses a federated query against https://beta.sparql.swisslipids.org/sparql/ after a suggestion by Jerven
 who indicated that the RDF4J backing this SPARQL endpoint will automatically batch the query against Wikidata, overcoming
@@ -69,19 +70,25 @@ SELECT ?wd ?key ?value WHERE {
 }
 ```
 
-
 This creates a file that looks like:
 
 ```shell
-Q27139080       P8691   "SLM:000000003"
-Q27139123       P8691   "SLM:000000006"
-Q27124972       P8691   "SLM:000000035"
-Q27139120       P8691   "SLM:000000047"
-Q27139134       P8691   "SLM:000000048"
-Q27088848       P8691   "SLM:000000119"
+Q76738581       P8691   "SLM:000163948" S248    Q41165322       S854    "https://www.swisslipids.org/#/downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76865359       P8691   "SLM:000163954" S248    Q41165322       S854    "https://www.swisslipids.org/#/downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76865370       P8691   "SLM:000163964" S248    Q41165322       S854    "https://www.swisslipids.org/#/downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76866423       P8691   "SLM:000163966" S248    Q41165322       S854    "https://www.swisslipids.org/#/downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76865004       P8691   "SLM:000163968" S248    Q41165322       S854    "https://www.swisslipids.org/#/downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76733356       P8691   "SLM:000164019" S248    Q41165322       S854    "https://www.swisslipids.org/#/downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76733312       P8691   "SLM:000164023" S248    Q41165322       S854    "https://www.swisslipids.org/#/downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76737210       P8691   "SLM:000164026" S248    Q41165322       S854    "https://www.swisslipids.org/#/downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76736881       P8691   "SLM:000164032" S248    Q41165322       S854    "https://www.swisslipids.org/#/downloads"       S813    +2021-11-06T00:00:00Z/11
+Q76735022       P8691   "SLM:000164034" S248    Q41165322       S854    "https://www.swisslipids.org/#/downloads"       S813    +2021-11-06T00:00:00Z/11
 ```
 
+This resulted in about 17.5 thousand mappings. These are based on exact InChIKey match. 
 
+## Step 5: running the QuickStatements
 
+The resulting mappings are being added via the [QuickStatements website](https://quickstatements.toolforge.org/).
 
 

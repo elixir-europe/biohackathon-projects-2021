@@ -51,3 +51,7 @@ We are planning to attend with 6-7 people and would be happy to welcome 2-3 more
 
 **Number of expected hacking days**: We'll take the full 4 days.
 
+## Resources
+
+- repository for isa4j: https://github.com/IPK-BIT/isa4j . The extension is being developed in the [miappe](https://github.com/IPK-BIT/isa4j/tree/miappe) branch
+
