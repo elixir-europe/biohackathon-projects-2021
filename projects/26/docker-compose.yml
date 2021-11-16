@@ -1,0 +1,93 @@
+version: "3.3"
+services:
+
+  api:
+    build: .
+    environment:
+      - DBA_PASSWORD=${DBA_PASSWORD-dba}
+      ## Production deployment with https://github.com/nginx-proxy/nginx-proxy
+      - VIRTUAL_HOST=ranking.semanticscience.org
+      - LETSENCRYPT_HOST=ranking.semanticscience.org
+      - VIRTUAL_PORT=80
+    restart: unless-stopped
+    # depends_on:
+    #   - virtuoso
+
+
+
+  graphdb:
+    container_name: graphdb
+    image: vemonet/graphdb:9.7.0
+    # image: ontotext/graphdb:9.3.0-ee
+    # build:
+    #   context: ./free-edition
+    #   dockerfile: Dockerfile
+    #   args:
+    #     version: 9.3.0
+    restart: unless-stopped
+    environment: 
+      GDB_JAVA_OPTS: >-
+        -Xmx200g -Xms200g
+        -Dgraphdb.home=/opt/graphdb/home
+        -Dgraphdb.workbench.importDirectory=/opt/graphdb/home/import
+        -Dgraphdb.workbench.cors.enable=true
+        -Denable-context-index=true
+        -Dentity-pool-implementation=transactional
+        -Dgraphdb.append.request.id.headers=true
+        -Dreuse.vars.in.subselects=true
+      # -Dhealth.max.query.time.seconds=60
+      # - GDB_HEAP_SIZE=70G
+      # - GDB_MIN_MEM=100G
+      # - GDB_MAX_MEM=200G
+      # Total: 500G RAM, see http://graphdb.ontotext.com/documentation/standard/requirements.html  
+      VIRTUAL_HOST: graphdb.137.120.31.148.sslip.io
+      LETSENCRYPT_HOST: graphdb.137.120.31.148.sslip.io
+      VIRTUAL_PORT: 7200
+    volumes:
+      - /data/graphdb:/opt/graphdb/home
+      # - /data/graphdb/tmp:/tmp
+    # mem_limit: 0
+    # ports: 
+    #   - 7200:7200
+
+
+
+
+
+  # virtuoso:
+  #   image: openlink/virtuoso-opensource-7:latest
+  #   restart: unless-stopped
+  #   ## Change the volume
+  #   volumes:
+  #     - ./data:/database
+  #   ports:
+  #     - 8890:8890
+  #     - 1111:1111
+  #   environment:
+  #     - DBA_PASSWORD=${VIRTUOSO_PASSWORD:-dba}
+  #     - DAV_PASSWORD=${VIRTUOSO_PASSWORD:-dba}
+  #     - SPARQL_UPDATE=true
+  #     # - VIRTUAL_PORT=8890
+  #     # - VIRTUAL_HOST=ranked-virtuoso.137.120.31.148.sslip.io
+  #     # - LETSENCRYPT_HOST=ranked-virtuoso.137.120.31.148.sslip.io
+  #     ## Choose between dynamic URI or define it yourself
+  #     - VIRT_URIQA_DynamicLocal=1
+  #     # - VIRT_URIQA_DefaultHost=your.url.org
+  #     - DEFAULT_GRAPH=https://w3id.org/um/
+  #     ## Uncomment the following lines for large amount of data 
+  #     # - VIRT_Database_ErrorLogLevel=2 # default: 7 is maximum logs
+  #     # - VIRT_HTTPServer_HTTPThreadSize=280000
+  #     # - VIRT_URIQA_DynamicLocal=1
+  #     # - VIRT_SPARQL_ResultSetMaxRows=1048576
+  #     # - VIRT_SPARQL_MaxQueryCostEstimationTime=200000
+  #     # - VIRT_SPARQL_MaxQueryExecutionTime=1000000
+  #     # - VIRT_Database_MaxCheckpointRemap=125000
+  #     # - VIRT_TempDatabase_MaxCheckpointRemap=125000
+  #     # - VIRT_Parameters_TempDBSize=100000000
+  #     # - VIRT_Parameters_NumberOfBuffers=5450000 # For 64G systems
+  #     # - VIRT_Parameters_MaxDirtyBuffers=4000000
+  #     # - VIRT_SPARQL_ShortenLongURIs=1
+  #     # - VIRT_SPARQL_MaxCacheExpiration=1
+  #     # - VIRT_SPARQL_ExternalQuerySource=1
+  #     # - VIRT_SPARQL_ExternalXsltSource=1
+  #     # - VIRT_Parameters_DirsAllowed=".,/usr/local/virtuoso-opensource/share/virtuoso/vad,/data"
