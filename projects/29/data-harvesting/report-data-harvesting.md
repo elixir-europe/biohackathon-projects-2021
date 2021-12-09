@@ -12,10 +12,15 @@ authors:
   - name: Petros Papadopoulos
     orcid: 0000-0002-8110-7576
     affiliation: 1
+  - name: Sébastien Moretti
+    orcid: 0000-0003-3947-488X
+    affiliation: 2
 
 affiliations:
  - name: Heriot-Watt University, Edinburgh, UK
    index: 1
+ - name: SIB Swiss Institute of Bioinformatics, Lausanne, CH
+   index: 2
 
 date: 11 November 2021
 bibliography: paper.bib
@@ -73,6 +78,8 @@ The result presented here is equivalent to number of pages harvested since BMUSE
 ### Number of instance per class
 
 There are many different types included in the markup. BMUSE extracts all markup, not just Bioschemas profiles.
+
+(Maybe there is confusion between https://schema.org/URL amd https://schema.org/url ?)
 
 (57 results)
 | Class | distinctInstances |
@@ -208,7 +215,7 @@ We now report the number of pages that have been harvested from each domain. Not
 
 ### Count of Types per Domain
 
-We now report the number of instances of each type on each domain. Waht is intersting here is the fact that Bgee has many proteins listed on their pages.
+We now report the number of instances of each type on each domain. What is interesting here is the fact that Bgee has many proteins listed on their pages.
 
 (146 results)
 | domain | type | count |
