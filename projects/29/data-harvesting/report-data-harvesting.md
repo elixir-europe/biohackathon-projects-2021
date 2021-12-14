@@ -12,10 +12,15 @@ authors:
   - name: Petros Papadopoulos
     orcid: 0000-0002-8110-7576
     affiliation: 1
+- name: Ivan Mičetić
+    orcid: 0000-0003-1691-8425
+    affiliation: 3
 
 affiliations:
  - name: Heriot-Watt University, Edinburgh, UK
    index: 1
+- name: University of Padua, Padova, IT
+   index: 3 
 
 date: 11 November 2021
 bibliography: paper.bib
