@@ -181,6 +181,8 @@ The UniProt contribution was supported by UniProt by the National Eye Institute 
 
 N. H. acknowledges funding from the Federal Ministry of Education and Research in Germany (BMBF) (grant number: FKZ 031A532B).
 
+The MolMeDB contribution was funded by ELIXIR CZ (project LM2018131).
+
 # References
 
 Leave this section blank, create a paper.bib with all your references.
