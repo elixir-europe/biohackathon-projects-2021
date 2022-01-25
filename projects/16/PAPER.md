@@ -1,8 +1,9 @@
 # Wine Ontology 2021 - Reworking structured wine metadata into Food Ontology
-Sirarat Sarntivijai[^1], Damion Dooley[^2], --- calling for co-authors
+Sirarat Sarntivijai[^1], Damion Dooley[^2], Robert Warren[^3] --- calling for co-authors
 
 [^1]:ELIXIR Hub, Wellcome Genome Campus, Hinxton, Cambridge, CB10 1SD, UK
 [^2]:Centre for Infectious Disease Genomics and One Health, Simon Fraser University, 8888 University Drive, Burnaby, BC, V5A 1S6, Canada
+[^3]:Glengarry Agriculture and Forestry, Ottawa, Canada
 
 
 ## Abstract
