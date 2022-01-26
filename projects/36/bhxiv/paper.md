@@ -10,11 +10,16 @@ authors:
   - name: Giovanni Delussu 
     orcid: 0000-0002-1023-2257
     affiliation: 2
+  - name: Danielle Welter
+    orcid: 0000-0003-1058-2668
+    affiliation: 3
 affiliations:
   - name: Human Genetics, Leiden University Medical Center, Leiden, Netherlands
     index: 1
   - name: Digital Health Group, CRS4 Center for Advanced Studies, Research and Development in Sardinia, Pula, Italy
     index: 2
+  - name: Luxembourg Centre for Systems Biomedicine, University of Luxembourg, Esch-sur-Alzette, Luxembourg
+    index: 3
 date: 11 November 2021
 cito-bibliography: paper.bib
 event: Barcelona2021
@@ -164,7 +169,32 @@ docker inspect 6cd32142e88c | grep -i IPADD
 [^2]: [https://github.com/OHDSI/ETL-Synthea]( https://github.com/OHDSI/ETL-Synthea )
 [^3]:[https://github.com/synthetichealth/synthea/releases/tag/v2.7.0](https://github.com/synthetichealth/synthea/releases/tag/v2.7.0)
 [^4]:https://athena.ohdsi.org/vocabulary/
+
 ### Mapping Omop to Phenopackets
+
+In order to create reusable mappings between OMOP and Phenopackets, we first identified the appropriate tables in the OMOP schema for each relevant Phenopacket entity (or "building block"). A number of Phenopacket entities are outside the scope of OMOP, in particular in the area of "Genomic Interpretation". We also excluded the top-level elements of "Family" and "Cohort" as again, these are not within the OMOP scope, which is focused on healthcare data of individual patients.
+
+After an initial review of the two domains, we found that no Phenopacket concept has a direct one-to-one mapping to a single entity in the OMOP CDM. While there are many fields that have a direct equivalence between the two, fields within one Phenopacket entity are usually spread across multiple OMOP tables and vice-versa. In addition, some Phenopackets fields need to be derived or inferred from one or more OMOP fields, especially for time- and date-related fields. For example, Phenopacket's Individual.date\_of\_birth is a concatenation of OMOP's Person.year\_of\_birth, Person.month\_of\_birth and Person.day\_of\_birth if Person.birth\_datetime is not available, while Phenopacket's Treatment.interval.end is derived from OMOP's DrugEra.drug\_exposure\_start\_date and DrugExposure.days\_supply if DrugEra.drug\_exposure\_end\_date is not available. Equally, concepts such as Disease.primary\_site and Disease.laterality need to be derived from multiple entries in the ConditionOccurrence table linked via specific concept relationships. 
+
+Differentiating between PhenotypicFeature and Disease posed another mapping challenge as a lot of concept in OMOP ConditionOccurrence are more aligned with the concept of phenotypic feature than disease (eg cerebrovasuclar accident, atrial fibrillation). We were faced with either having to declare a set equivalence between ConditionOccurrence and one of the Phenopacket entities or using query refinements to assess each ConditionOccurrence against ontologies such as HPO and MONDO in order to determine the correct Phenopackets concept for each mapping.
+
+Table 1 shows an overview of the Phenopacket entity to OMOP table mappings. The full list of mappings in available in appendix 1.
+
+| Phenopacket Entity | OMOP Tables |
+| ------------------ | ----------- |
+| Individual | Person, VisitOccurrence, Death |
+| VitalStatus | Death, Person, ConditionOccurrence |
+| PhenotypicFeature| Observation, ConditionOccurrence, ConditionEra |
+| Measurement| Measurement, (ProcedureOccurrence) |
+| Disease | ConditionOccurrence |
+| MedicalAction | DrugEra, EpisodeEvent, DrugExposure |
+| Procedure | ProcedureOccurrence, Person |
+| Treatment | DrugExposure, DrugStrength, DrugEra |
+| RadiationTherapy | ConditionOccurrence, DrugExposure, DrugEra |
+| TherapeuticRegimen | DoseEra, DrugExposure |
+
+
+
 
 ### SQL script creation
 
