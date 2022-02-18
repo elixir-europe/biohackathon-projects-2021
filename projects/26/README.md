@@ -4,7 +4,7 @@
 
 With the fast Increasing volumes of dataset being generated, routines for searching and discovering datasets are becoming more and more important and essential components for open science and efficient reuse of data.
 
-Although different paradigms exist to encourage dataset sharing and searching, for example FAIR Data Point and Google Dataset Search, it is still by far not as advanced as document search, particularly considering the lack of semantics during search and poor ranking due to very limited clues for ranking in the metadata. Within the European Joing Programme on Rare Diseases (EJP-RD) the FAIR Data Point is a key technology that will be used for discovery of appropriate clinical resources.  As such, it is important to address this critical limitation.
+Although different paradigms exist to encourage dataset sharing and searching, for example FAIR Data Point and Google Dataset Search, it is still by far not as advanced as document search, particularly considering the lack of semantics during search and poor ranking due to very limited clues for ranking in the metadata. Within the European Joint Programme on Rare Diseases (EJP-RD) the FAIR Data Point is a key technology that will be used for discovery of appropriate clinical resources.  As such, it is important to address this critical limitation.
 
 To address the challenge of enabling more effective ranking, we propose developing a ranking algorithm to help users more easily find the most relevant dataset to their query. We plan to implement and exercise this algorithm on a FAIR Data Point instance as it is open sourced.
 
