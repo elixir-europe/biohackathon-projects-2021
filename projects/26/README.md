@@ -29,10 +29,10 @@ Tools Platform
 ## Team
 
 **EJP-RD Team Members:**  
-Peter-Bram ‘t Hoen
-Mark Wilkinson
-Rajaram Kaliyaperumal
-Pablo Alarcon Moreno
+   * Peter-Bram ‘t Hoen
+   * Mark Wilkinson
+   * Rajaram Kaliyaperumal
+   * Pablo Alarcon Moreno
 
 ### Lead(s)
 
