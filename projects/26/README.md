@@ -10,15 +10,7 @@ To address the challenge of enabling more effective ranking, we propose developi
 
 ## Topics
 
-Compute Platfrom
-Containers
-Data Platform
-industry
-Machine learning
-Metabolomics
-Rare Disease
-EJP-RD
-Tools Platform
+Compute Platfrom, Containers, Data Platform, Rare Disease, EJP-RD, industry, Machine learning, Metabolomics, Tools Platform
 
 **Project Number:** 26
 
