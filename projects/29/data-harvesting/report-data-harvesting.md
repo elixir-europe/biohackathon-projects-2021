@@ -12,15 +12,25 @@ authors:
   - name: Petros Papadopoulos
     orcid: 0000-0002-8110-7576
     affiliation: 1
-- name: Ivan Mičetić
+  - name: Alban Gaignard
+    orcid: 0000-0002-3597-8557
+    affiliation: 2
+  - name: Ivan Mičetić
     orcid: 0000-0003-1691-8425
     affiliation: 3
+  - name: Sébastien Moretti
+    orcid: 0000-0003-3947-488X
+    affiliation: 4
 
 affiliations:
  - name: Heriot-Watt University, Edinburgh, UK
    index: 1
-- name: University of Padua, Padova, IT
+ - name: Nantes Université, CNRS, INSERM, l’institut du thorax, F-44000 Nantes, France
+   index: 2
+ - name: University of Padua, Padova, Italy
    index: 3 
+ - name: Université de Lausanne, Lausanne, Switzerland
+   index: 4
 
 date: 11 November 2021
 bibliography: paper.bib
