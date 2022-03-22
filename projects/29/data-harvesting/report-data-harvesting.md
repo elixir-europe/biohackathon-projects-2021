@@ -72,15 +72,19 @@ In total, six sites were found to be unscrapable. These were
 
 # Data Analysis
 
-We reused the notebook originally developed at BioHackathon 2020 (https://biohackrxiv.org/v3jct/) and since evolved for the IDP-IG (). We include the HCLS Dataset Description profile statistics queries, read in from an existing [repository](https://github.com/AlasdairGray/HCLS-Stats-Queries). We also include [queries](https://github.com/BioSchemas/bioschemas-data-harvesting/tree/main/queries) developed specifically for the analysis of the Bioschemas harvested data.
+We reused the notebook originally developed at BioHackathon 2020 (https://biohackrxiv.org/v3jct/) and since evolved for the Intrinsically Disordered Protein Knowledge Graph (IDP-KG) [@gray_idp-kg_2022]. We include the HCLS Dataset Description profile statistics queries ([§6](https://www.w3.org/TR/hcls-dataset/#s6_6) [@Dumontier:HCLS-datadesc:PeerJ2016], read in from an existing [repository](https://github.com/AlasdairGray/HCLS-Stats-Queries). We also include [queries](https://github.com/BioSchemas/bioschemas-data-harvesting/tree/main/queries) developed specifically for the analysis of the Bioschemas harvested data.
 
-To use the notebook (linked at the end of the report), you simply need to run all cells and then select the query you would like to run from the resulting dropdown menu.
+To use the [notebook (MyBinder launcher)](https://mybinder.org/v2/gh/BioSchemas/bioschemas-data-harvesting/HEAD?labpath=AnalysisQueries.ipynb), you simply need to run all cells and then select the query you would like to execute from the resulting dropdown menu.
+
+We now present the results of the queries obtained during the hackathon.
 
 ## HCLS Dataset Statistics
 
-We include here a selection of results from some of the HCLS statistics queries. For the full set of queries and results, please run the notebook.
+We include here a selection of results from some of the HCLS statistics queries. We focus on those providing the most interesting statistics for the available data. For the full set of queries and results, please run the notebook.
 
 ### Number of triples
+
+This is the raw count of the number of triples contained in the triplestore repository.
 
 | triples |
 | ---: |
@@ -97,6 +101,8 @@ The result presented here is equivalent to number of pages harvested since BMUSE
 ### Number of instance per class
 
 There are many different types included in the markup. BMUSE extracts all markup, not just Bioschemas profiles.
+
+The results are ordered by the Class IRI; in the notebook you can edit the query and change the ordering of results.
 
 (57 results)
 | Class | distinctInstances |
@@ -167,6 +173,8 @@ The following queries focus on features of interest to the Bioschemas community.
 
 Note that due to the data content we need to include some properties with both a Bioschemas namespace and a Schema.org namespace.
 
+The results are ordered by the count of the number of instances; in the notebook you can edit the query and change the ordering of results.
+
 (18 results)
 | Class | instances |
 | :--- | ---: |
@@ -199,7 +207,7 @@ This result informs us how many web domains were harvested. This is approximatel
 
 ### Number of Pages per Domain
 
-We now report the number of pages that have been harvested from each domain. Note that we do not understand the empty domain.
+We now report the number of pages that have been harvested from each domain. Note that we do not understand the empty domain as all markup was extracted from a web domain.
 
 (25 results)
 | domain | count |
@@ -232,7 +240,9 @@ We now report the number of pages that have been harvested from each domain. Not
 
 ### Count of Types per Domain
 
-We now report the number of instances of each type on each domain. Waht is intersting here is the fact that Bgee has many proteins listed on their pages.
+We now report the number of instances of each type on each domain. What is intersting here is the fact that Bgee has many proteins listed on their pages.
+
+The results are ordered by the count of the number of instances; in the notebook you can edit the query and change the ordering of results.
 
 (146 results)
 | domain | type | count |
@@ -419,27 +429,31 @@ We then investigated the number of outgoing links per class. We report here the 
 | https://bioschemas.org/crawl/v1/bgee/?page=gene&amp;gene_id=ENSBTAG00000043560/20211110/94711/bgee.org/?page=gene&amp;gene_id=ENSBTAG00000043560/1818154049 | https://bioschemas.org/Gene | 229 |
 
 
-# Discussion and/or Conclusion
+# Discussion
 
-Harvesting Challenges:
-- Time taken to scrape, particularly dynamic sites
-- Improvements for harvesting pipeline, including automating
-  - Merge files
-  - One file per subsitemap
-  - Automatic iteration over sitemap index
+Through this Hackathon project we have demonstrated that it is possible to harvest Bioschemas markup from a number of sites and load them into a triplestore. However, this has revealed a number of challenges that need to be resolved.
+
+Harvesting content from a whole site is very time consuming, particularly for dynamic sites. Harvesting requires visiting each page with markup in turn and extracting the markup. In the case of dynamic sites the content needs to be rendered before it can be extracted. Most of the sites that could be completed harvested did not contain data content beyond Dataset and DataCatalog.
+
+The quality of deployed markup is very problematic. As reported above, a number of sites could not be harvested due to issues with their sitemap. Of those that could be harvested, a number of pages were not harvested due to issues with the markup contained within them, e.g. inclusion of non-escaped characters within strings was a common error. Even the markup that could be extracted contained errors, e.g. the use of different namespaces for the declaration of the Gene type as identified in the Instances per Bioschemas Class query. This highlights the need for a Bioschemas validator capable of both syntactic and semantic checking (see the data validation outputs of [Project 29](https://github.com/elixir-europe/biohackathon-projects-2021/tree/main/projects/29/data-validation)).
 
 # Future work
 
+The next steps for this work would be to improve the robustness of the data harvesting pipeline, including automating the manual steps of iterating over an index of sitemap files; merging individual files for each harvested page into a single file per subsitemap; and loading the harvested data into the triplestore.
+
+The use of data dumps for sites should be considered to eliminate the need for data harvesting, which is a costly process for both data producers -- who have to have sufficient bandwidth and compute resources to serve the content -- and data consumers -- who have to have sufficient compute resources to retrieve, render, and extract the content from each page.
 
 # Jupyter notebooks, GitHub repositories and data repositories
 
 * GitHub repository: https://github.com/BioSchemas/bioschemas-data-harvesting
-* Jupyter Notebooks: https://github.com/BioSchemas/bioschemas-data-harvesting/blob/main/AnalysisQueries.ipynb
+* Jupyter Notebook: https://github.com/BioSchemas/bioschemas-data-harvesting/blob/main/AnalysisQueries.ipynb
+    * MyBinder launch: https://mybinder.org/v2/gh/BioSchemas/bioschemas-data-harvesting/HEAD?labpath=AnalysisQueries.ipynb
+* SPARQL Endpoint: https://swel.macs.hw.ac.uk/data/repositories/bioschemas
+  * Snorql Extended Interface: https://swel.macs.hw.ac.uk/bioschemas/
+* Data download director: https://swel.macs.hw.ac.uk/bioschemas-data/
 
 # Acknowledgements
 
-We wish to thank the organizers and supporters of the Biohackathon Europe 2021 for offering the venue for improving Bioschemas community efforts.
+This work was done during the BioHackathon Europe 2021 organised by ELIXIR and run in November 2021. We wish to thank the organizers and supporters of the Biohackathon Europe 2021 for offering the venue for improving Bioschemas community efforts.
 
 # References
-
-Leave thise section blank, create a paper.bib with all your references.
