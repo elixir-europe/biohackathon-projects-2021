@@ -41,6 +41,9 @@ event: BioHackathon Europe 2021
 
 # Introduction
 
+The promise of Bioschemas is that it makes consuming data from multiple resources more straightforward. However, this hypothesis has not been tested by conducting a large scale harvest of deployed markup and making this available for others to reuse. Therefore, the goal of this project is to use [BMUSE](https://github.com/HW-SWeL/BMUSE) to harvest some of the sites listed in the Bioschemas [live deploys page](https://bioschemas.org/liveDeploy). The harvested data will be loaded into a triplestore to allow for further exploration.
+
+
 # Data Harvesting
 
 Prior to the BioHackathon, we set about harvesting data from as many of the Bioschemas [live deploy sites](https://bioschemas.org/liveDeploys) as possible. At the time of the BioHackathon, there were 70 sites listed, and 137 profile deployments (a site can deploy multiple profiles, e.g. Dataset and DataCatalog). Not all deployments could be harvested since they do not provide sitemaps listing the pages within the site. At the time of the BioHackathon there were 25 sites with sitemaps. Several of these do not list the pages containing data, limiting the amount that could be harvested. 
