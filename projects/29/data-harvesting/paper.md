@@ -73,7 +73,7 @@ In total, six sites were found to be unscrapable. These were
 
 # Data Analysis
 
-We reused the notebook originally developed at BioHackathon 2020 (https://biohackrxiv.org/v3jct/) and since evolved for the Intrinsically Disordered Protein Knowledge Graph (IDP-KG) [@gray_idp-kg_2022]. We include the HCLS Dataset Description profile statistics queries ([§6](https://www.w3.org/TR/hcls-dataset/#s6_6)) [@Dumontier_HCLS-datadesc_PeerJ2016], read in from an existing [repository](https://github.com/AlasdairGray/HCLS-Stats-Queries). We also include [queries](https://github.com/BioSchemas/bioschemas-data-harvesting/tree/main/queries) developed specifically for the analysis of the Bioschemas harvested data.
+We reused the notebook originally developed at BioHackathon 2020 (https://biohackrxiv.org/v3jct/) and since evolved for the Intrinsically Disordered Protein Knowledge Graph (IDP-KG) [@gray_idp-kg_2022]. We include the HCLS Dataset Description profile statistics queries ([§6](https://www.w3.org/TR/hcls-dataset/#s6_6)) [@Dumontier:HCLS-datadesc:PeerJ2016], read in from an existing [repository](https://github.com/AlasdairGray/HCLS-Stats-Queries). We also include [queries](https://github.com/BioSchemas/bioschemas-data-harvesting/tree/main/queries) developed specifically for the analysis of the Bioschemas harvested data.
 
 To use the [notebook (MyBinder launcher)](https://mybinder.org/v2/gh/BioSchemas/bioschemas-data-harvesting/HEAD?labpath=AnalysisQueries.ipynb), you simply need to run all cells and then select the query you would like to execute from the resulting dropdown menu.
 

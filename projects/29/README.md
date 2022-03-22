@@ -40,9 +40,9 @@ Leyla Jael Garcia Castro, ljgarcia@zbmed.de
 - Chris Child (TeSS portal)
 - Ginger Tsueng (Data Discovery Engine)
 - Thomas Rosnet (FAIR-checker)
--  Alan Williams (WorkflowHub)
-- Alessia Bardi (openAIRE)
-- Claudio Atzori (openAIRE)
+- Alan Williams (WorkflowHub)
+- Alessia Bardi (CNR/OpenAIRE)
+- Claudio Atzori (CNR/OpenAIRE)
 - Nick Juty (Bioschemas)
 
 and anyone knowledge-able in Knowledge Graphs, Schema.org, metadata validation technologies
