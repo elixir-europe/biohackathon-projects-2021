@@ -41,7 +41,7 @@ event: BioHackathon Europe 2021
 
 # Introduction
 
-The promise of Bioschemas is that it makes consuming data from multiple resources more straightforward. However, this hypothesis has not been tested by conducting a large scale harvest of deployed markup and making this available for others to reuse. Therefore, the goal of this project is to use [BMUSE](https://github.com/HW-SWeL/BMUSE) to harvest some of the sites listed in the Bioschemas [live deploys page](https://bioschemas.org/liveDeploy). The harvested data will be loaded into a triplestore to allow for further exploration.
+The promise of Bioschemas is that it makes consuming data from multiple resources more straightforward. However, this hypothesis has not been tested by conducting a large scale harvest of deployed markup and making this available for others to reuse. Therefore, the goal of this hackathon project is to harvest a collection of Bioschemas markup from a number of different sites listed on the Bioschemas [live deploys page](https://bioschemas.org/liveDeploy) using the Bioschemas Markup Scraper and Extractor ([BMUSE](https://github.com/HW-SWeL/BMUSE)). The harvested data will be made available for others and loaded into a triplestore to allow for further exploration.
 
 
 # Data Harvesting
@@ -50,10 +50,10 @@ Prior to the BioHackathon, we set about harvesting data from as many of the Bios
 
 The list of sites to be harvested were gathered in a GitHub [project board](https://github.com/BioSchemas/bioschemas-data-harvesting/projects/1) so that progress could be tracked. The cards in this board were annotated to state whether the source was known to use a static site deployment (i.e. the markup is embedded in the page source by the server) or dynamic single page application (i.e. the page content is generated client side using Javascript), and also whether they were known to have data content or limited content of Dataset and DataCatalog.
 
-The Bioschemas Markup Scraper and Extractor ([BMUSE](https://github.com/HW-SWeL/BMUSE)) was used for the harvesting of the data. During the harvesting we found a two key issues with BMUSE which arose due to the scale of the data harvest. The first was that errors in the JSON-LD were not correctly identified and logged. The second was a memory limit relating to JSoup which meant that about 24,104 pages were scraped out of the 50,000 in the sitemap file ([BMUSE #82](https://github.com/HW-SWeL/BMUSE/issues/82)). Fixes to these issues were applied resulting in BMUSE v0.5.2 being used for most of the harvesting.
+The Bioschemas Markup Scraper and Extractor ([BMUSE](https://github.com/HW-SWeL/BMUSE)) was used for the harvesting of the data. During the harvesting we found a two key issues with BMUSE which arose due to the scale of the data harvest. The first was that errors in the JSON-LD were not correctly identified and logged. The second was a memory limit relating to JSoup which meant that only about 24,104 pages were scraped out of the 50,000 in the sitemap file ([BMUSE #82](https://github.com/HW-SWeL/BMUSE/issues/82)). Fixes to these issues were applied resulting in BMUSE v0.5.2 being used for most of the harvesting.
 
 The data harvesting workflow consisted of the following steps:
-1. Pick one of the sites to be harvested: priority was given to static sites with data content.
+1. Pick one of the sites to be harvested: priority was given to static sites with data content since these could be harvested more quickly and went beyond Dataset/DataCatalog markup.
 2. For each sitemap in the sitemap index, harvest the content from the source pages.
 3. Merge the individual nquad files for each page in the (sub)sitemap into a single nquad file.
 4. Load the merged nquad file into the triplestore.
@@ -62,7 +62,13 @@ The data harvesting workflow consisted of the following steps:
 
 Where issues were found with the source site, these were fedback to the data provider to allow them to revise their markup. For example, it was found that MassBank were including characters in their string values such as `"` that need to be escaped to generate valid JSON-LD ([MassBank-Web #316](https://github.com/MassBank/MassBank-web/issues/316)). 
 
-**TODO:** Add comment about problematic sites.
+In total, six sites were found to be unscrapable. These were 
+- InterPro: a dynamic site providing a sitemap. However, the sitemap did not conform with the sitemap standard.
+- Scholia COVID-19 URL list: a site generated via SPARQL queries over the Wikidata endpoint. Unable to scrape due to timeout being reached before the data being available.
+- SwissModel: the provided sitemap did not conform with the sitemap stanard.
+- WikiPathways: sitemap was empty.
+- IPPIDB: a dynamic site with data content corresponding to MolecularEntities. However, the pages exhibiht inconsistent rendering when tested in the browser and could not be harvested with BMUSE.
+- OrphaNet: a static site with disease markup. The sitemap conforms with the older Google proposal for sitemaps rather than the widely used 0.9 version expected by BMUSE
 
 # Data Analysis
 
