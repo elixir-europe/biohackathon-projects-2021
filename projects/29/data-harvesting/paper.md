@@ -54,16 +54,18 @@ The list of sites to be harvested were gathered in a GitHub [project board](http
 The Bioschemas Markup Scraper and Extractor ([BMUSE](https://github.com/HW-SWeL/BMUSE)) was used for the harvesting of the data. During the harvesting we found a two key issues with BMUSE which arose due to the scale of the data harvest. The first was that errors in the JSON-LD were not correctly identified and logged. The second was a memory limit relating to JSoup which meant that only about 24,104 pages were scraped out of the 50,000 in the sitemap file ([BMUSE #82](https://github.com/HW-SWeL/BMUSE/issues/82)). Fixes to these issues were applied resulting in BMUSE v0.5.2 being used for most of the harvesting.
 
 The data harvesting workflow consisted of the following steps:
+
 1. Pick one of the sites to be harvested: priority was given to static sites with data content since these could be harvested more quickly and went beyond Dataset/DataCatalog markup.
-2. For each sitemap in the sitemap index, harvest the content from the source pages.
-3. Merge the individual nquad files for each page in the (sub)sitemap into a single nquad file.
-4. Load the merged nquad file into the triplestore.
-5. Make the merged nquad file available on the web.
-6. Update the project [README](https://github.com/BioSchemas/bioschemas-data-harvesting) with details of what had been harvested.
+1. For each sitemap in the sitemap index, harvest the content from the source pages.
+1. Merge the individual nquad files for each page in the (sub)sitemap into a single nquad file.
+1. Load the merged nquad file into the triplestore.
+1. Make the merged nquad file available on the web.
+1. Update the project [README](https://github.com/BioSchemas/bioschemas-data-harvesting) with details of what had been harvested.
 
 Where issues were found with the source site, these were fedback to the data provider to allow them to revise their markup. For example, it was found that MassBank were including characters in their string values such as `"` that need to be escaped to generate valid JSON-LD ([MassBank-Web #316](https://github.com/MassBank/MassBank-web/issues/316)). 
 
 In total, six sites were found to be unscrapable. These were 
+
 - InterPro: a dynamic site providing a sitemap. However, the sitemap did not conform with the sitemap standard.
 - Scholia COVID-19 URL list: a site generated via SPARQL queries over the Wikidata endpoint. Unable to scrape due to timeout being reached before the data being available.
 - SwissModel: the provided sitemap did not conform with the sitemap stanard.
@@ -73,11 +75,13 @@ In total, six sites were found to be unscrapable. These were
 
 # Data Analysis
 
-We reused the notebook originally developed at BioHackathon 2020 (https://biohackrxiv.org/v3jct/) and since evolved for the Intrinsically Disordered Protein Knowledge Graph (IDP-KG) [@gray_idp-kg_2022]. We include the HCLS Dataset Description profile statistics queries ([§6](https://www.w3.org/TR/hcls-dataset/#s6_6)) [@Dumontier_HCLS-datadesc_PeerJ2016], read in from an existing [repository](https://github.com/AlasdairGray/HCLS-Stats-Queries). We also include [queries](https://github.com/BioSchemas/bioschemas-data-harvesting/tree/main/queries) developed specifically for the analysis of the Bioschemas harvested data.
+We reused the notebook originally developed at BioHackathon 2020 [@gray_bioschemas-idpcntral_2021] and since evolved for the Intrinsically Disordered Protein Knowledge Graph (IDP-KG) [@gray_idp-kg_2022]. We include the HCLS Dataset Description profile statistics queries[^footnote] [@Dumontier_HCLS-datadesc_PeerJ2016], read in from an existing [repository](https://github.com/AlasdairGray/HCLS-Stats-Queries). We also include [queries](https://github.com/BioSchemas/bioschemas-data-harvesting/tree/main/queries) developed specifically for the analysis of the Bioschemas harvested data.
 
 To use the [notebook (MyBinder launcher)](https://mybinder.org/v2/gh/BioSchemas/bioschemas-data-harvesting/HEAD?labpath=AnalysisQueries.ipynb), you simply need to run all cells and then select the query you would like to execute from the resulting dropdown menu.
 
-We now present the results of the queries obtained during the hackathon.
+We now present the results of the queries obtained during the hackathon, i.e. the data values are as they were on 11 November 2021. Running the notebook in March 2022 obtains different results due to more harvested data having been added.
+
+[^footnote]: [Dataset Descriptions: HCLS Community Profile §6](https://www.w3.org/TR/hcls-dataset/#s6_6) accessed March 2022
 
 ## HCLS Dataset Statistics
 
@@ -411,7 +415,7 @@ We first investigated the number of nodes that only contained incoming edges. We
 
 We then investigated the number of outgoing links per class. We report here the top 20 results.
 
-\pagebreak
+
 
 \begin{longtable}{p{.5\textwidth}p{.25\textwidth}r}
     \hline
