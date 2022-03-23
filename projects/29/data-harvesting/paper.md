@@ -411,28 +411,32 @@ We first investigated the number of nodes that only contained incoming edges. We
 
 We then investigated the number of outgoing links per class. We report here the top 20 results.
 
-| s | class | nb_out_edges |
-| :--- | :--- | ---: |
-| https://bioschemas.org/crawl/v1/bgee/?page=gene&amp;gene_id=ENSBTAG00000027937/20211110/90020/bgee.org/?page=gene&amp;gene_id=ENSBTAG00000027937/1779564251 | https://bioschemas.org/Gene | 856 |
-| https://www.metanetx.org/chem_info/MNXM1944 | https://schema.org/MolecularEntity | 654 |
-| https://doi.org/10.15468/hb9rjv | https://schema.org/Dataset | 594 |
-| https://bioschemas.org/crawl/v1/bgee/?page=gene&amp;gene_id=ENSBTAG00000043564/20211110/94715/bgee.org/?page=gene&amp;gene_id=ENSBTAG00000043564/1772156424 | https://bioschemas.org/Gene | 519 |
-| https://bioschemas.org/crawl/v1/bgee/?page=gene&amp;gene_id=ENSBTAG00000043584/20211110/94734/bgee.org/?page=gene&amp;gene_id=ENSBTAG00000043584/2022662406 | https://bioschemas.org/Gene | 474 |
-| https://doi.org/10.15468/m5vrza | https://schema.org/Dataset | 406 |
-| http://www.ebi.ac.uk/pdbe/about/past-events | http://rdfs.org/sioc/ns#Item | 346 |
-| http://www.ebi.ac.uk/pdbe/about/past-events | http://xmlns.com/foaf/0.1/Document | 346 |
-| https://doi.org/10.15468/vmf5ye | https://schema.org/Dataset | 296 |
-| https://bioschemas.org/crawl/v1/bgee/?page=gene&amp;gene_id=ENSBTAG00000043559/20211110/94710/bgee.org/?page=gene&amp;gene_id=ENSBTAG00000043559/1377128066 | https://bioschemas.org/Gene | 292 |
-| https://doi.org/10.5281/zenodo.291971 | https://schema.org/Dataset | 289 |
-| https://bioschemas.org/crawl/v1/bgee/?page=gene&amp;gene_id=ENSBTAG00000043546/20211110/94697/bgee.org/?page=gene&amp;gene_id=ENSBTAG00000043546/1804549344 | https://bioschemas.org/Gene | 284 |
-| https://doi.org/10.15472/hy9nif | https://schema.org/Dataset | 282 |
-| https://bioschemas.org/crawl/v1/bgee/?page=gene&amp;gene_id=ENSBTAG00000043550/20211110/94701/bgee.org/?page=gene&amp;gene_id=ENSBTAG00000043550/1476242225 | https://bioschemas.org/Gene | 269 |
-| https://www.metanetx.org/chem_info/MNXM383 | https://schema.org/MolecularEntity | 264 |
-| https://bioschemas.org/crawl/v1/bgee/?page=gene&amp;gene_id=ENSBTAG00000043577/20211110/94727/bgee.org/?page=gene&amp;gene_id=ENSBTAG00000043577/1610681495 | https://bioschemas.org/Gene | 261 |
-| https://bioschemas.org/crawl/v1/bgee/?page=gene&amp;gene_id=ENSBTAG00000043556/20211110/94707/bgee.org/?page=gene&amp;gene_id=ENSBTAG00000043556/1277162978 | https://bioschemas.org/Gene | 240 |
-| https://bioschemas.org/crawl/v1/bgee/?page=gene&amp;gene_id=ENSBTAG00000043568/20211110/94719/bgee.org/?page=gene&amp;gene_id=ENSBTAG00000043568/2065005542 | https://bioschemas.org/Gene | 235 |
-| https://bioschemas.org/crawl/v1/bgee/?page=gene&amp;gene_id=ENSBTAG00000043560/20211110/94711/bgee.org/?page=gene&amp;gene_id=ENSBTAG00000043560/1818154049 | https://bioschemas.org/Gene | 229 |
+\pagebreak
 
+\begin{longtable}{p{.5\textwidth}p{.25\textwidth}r}
+    \hline
+        s & class & nb\_out\_edges \\ \hline
+        \url{https://bioschemas.org/crawl/v1/bgee/?page=gene\&amp;gene\_id=ENSBTAG00000027937/20211110/90020/bgee.org/?page=gene\&amp;gene\_id=ENSBTAG00000027937/1779564251} & \url{https://bioschemas.org/Gene} & 856 \\
+        \url{https://www.metanetx.org/chem\_info/MNXM1944} & \url{https://schema.org/MolecularEntity} & 654 \\
+        \url{https://doi.org/10.15468/hb9rjv} & \url{https://schema.org/Dataset} & 594 \\
+        \url{https://bioschemas.org/crawl/v1/bgee/?page=gene\&amp;gene\_id=ENSBTAG00000043564/20211110/94715/bgee.org/?page=gene\&amp;gene\_id=ENSBTAG00000043564/1772156424} & \url{https://bioschemas.org/Gene} & 519 \\
+        \url{https://bioschemas.org/crawl/v1/bgee/?page=gene\&amp;gene\_id=ENSBTAG00000043584/20211110/94734/bgee.org/?page=gene\&amp;gene\_id=ENSBTAG00000043584/2022662406} & \url{https://bioschemas.org/Gene} & 474 \\
+        \url{https://doi.org/10.15468/m5vrza} & \url{https://schema.org/Dataset} & 406 \\
+        \url{http://www.ebi.ac.uk/pdbe/about/past-events} & \url{http://rdfs.org/sioc/ns\#Item} & 346 \\
+        \url{http://www.ebi.ac.uk/pdbe/about/past-events} & \url{http://xmlns.com/foaf/0.1/Document} & 346 \\
+        \url{https://doi.org/10.15468/vmf5ye} & \url{https://schema.org/Dataset} & 296 \\
+        \url{https://bioschemas.org/crawl/v1/bgee/?page=gene\&amp;gene\_id=ENSBTAG00000043559/20211110/94710/bgee.org/?page=gene\&amp;gene\_id=ENSBTAG00000043559/1377128066} & \url{https://bioschemas.org/Gene} & 292 \\
+        \url{https://doi.org/10.5281/zenodo.291971} & \url{https://schema.org/Dataset} & 289 \\
+        \url{https://bioschemas.org/crawl/v1/bgee/?page=gene\&amp;gene\_id=ENSBTAG00000043546/20211110/94697/bgee.org/?page=gene\&amp;gene\_id=ENSBTAG00000043546/1804549344} & \url{https://bioschemas.org/Gene} & 284 \\
+        \url{https://doi.org/10.15472/hy9nif} & \url{https://schema.org/Dataset} & 282 \\
+        \url{https://bioschemas.org/crawl/v1/bgee/?page=gene\&amp;gene\_id=ENSBTAG00000043550/20211110/94701/bgee.org/?page=gene\&amp;gene\_id=ENSBTAG00000043550/1476242225} & \url{https://bioschemas.org/Gene} & 269 \\
+        \url{https://www.metanetx.org/chem\_info/MNXM383} & \url{https://schema.org/MolecularEntity} & 264 \\
+        \url{https://bioschemas.org/crawl/v1/bgee/?page=gene\&amp;gene\_id=ENSBTAG00000043577/20211110/94727/bgee.org/?page=gene\&amp;gene\_id=ENSBTAG00000043577/1610681495} & \url{https://bioschemas.org/Gene} & 261 \\
+        \url{https://bioschemas.org/crawl/v1/bgee/?page=gene\&amp;gene\_id=ENSBTAG00000043556/20211110/94707/bgee.org/?page=gene\&amp;gene\_id=ENSBTAG00000043556/1277162978} & \url{https://bioschemas.org/Gene} & 240 \\
+        \url{https://bioschemas.org/crawl/v1/bgee/?page=gene\&amp;gene\_id=ENSBTAG00000043568/20211110/94719/bgee.org/?page=gene\&amp;gene\_id=ENSBTAG00000043568/2065005542} & \url{https://bioschemas.org/Gene} & 235 \\
+        \url{https://bioschemas.org/crawl/v1/bgee/?page=gene\&amp;gene\_id=ENSBTAG00000043560/20211110/94711/bgee.org/?page=gene\&amp;gene\_id=ENSBTAG00000043560/1818154049} & \url{https://bioschemas.org/Gene} & 229 \\ \hline
+
+\end{longtable}
 
 # Discussion
 
