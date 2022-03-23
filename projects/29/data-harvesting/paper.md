@@ -15,6 +15,9 @@ authors:
   - name: Alban Gaignard
     orcid: 0000-0002-3597-8557
     affiliation: 2
+  - name: Thomas Rosnet
+    orcid: 0000-0003-0676-5461
+    affiliation: 2
   - name: Ivan Mičetić
     orcid: 0000-0003-1691-8425
     affiliation: 3
