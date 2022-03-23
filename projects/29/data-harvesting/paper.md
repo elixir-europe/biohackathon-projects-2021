@@ -106,6 +106,7 @@ There are many different types included in the markup. BMUSE extracts all markup
 The results are ordered by the Class IRI; in the notebook you can edit the query and change the ordering of results.
 
 (57 results)
+
 | Class | distinctInstances |
 | :--- | ---: |
 | http://rdfs.org/sioc/ns#Item | 57 |
@@ -177,6 +178,7 @@ Note that due to the data content we need to include some properties with both a
 The results are ordered by the count of the number of instances; in the notebook you can edit the query and change the ordering of results.
 
 (18 results)
+
 | Class | instances |
 | :--- | ---: |
 | https://schema.org/Person | 326,935 |
@@ -211,6 +213,7 @@ This result informs us how many web domains were harvested. This is approximatel
 We now report the number of pages that have been harvested from each domain. Note that we do not understand the empty domain as all markup was extracted from a web domain.
 
 (25 results)
+
 | domain | count |
 | :--- | ---: |
 | massbank.eu | 76,253 |
@@ -246,6 +249,7 @@ We now report the number of instances of each type on each domain. What is inter
 The results are ordered by the count of the number of instances; in the notebook you can edit the query and change the ordering of results.
 
 (146 results)
+
 | domain | type | count |
 | :--- | :--- | ---: |
 | www.gbif.org | https://schema.org/PostalAddress | 297,090 |
