@@ -29,8 +29,8 @@ Leyla Jael Castro, ljgarcia@zbmed.de
 
 ### Members
 Fernando Zhapa-Camacho, fernando.zhapacamacho@kaust.edu.sa
-Marco Anteghini, marco.anteghini@wur.nl
 Carsten Jahn, carsten.jahn@bayer.com
+Marco Anteghini, marco.anteghini@wur.nl
 Sonja Katz, sonja.katz@wur.nl
 Francesco Gualdi, fgualdi@imim.es
 
@@ -58,4 +58,4 @@ Skills needed:
 
 ## Paper
 
-The active paper.md report as a BioHackrXiv draft publication can be found [here](https://github.com/bio-ontology-research-group/elixir_biohackathon2021/paper.md)
+The active paper.md report as a BioHackrXiv draft publication can be found [here](https://github.com/bio-ontology-research-group/elixir_biohackathon2021/blob/main/paper.md)
