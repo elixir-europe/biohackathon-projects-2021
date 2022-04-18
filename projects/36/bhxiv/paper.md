@@ -204,6 +204,9 @@ and it connects to the Postgres database where it retrieves the data for the cho
 
 
 ## OMOP to Phenopackets for the Semantic Web
+Semantic web technologies are being extensively used in the modeling of clinical data resources to fulfill the FAIR criterias. This is the case in the Swiss Personalized Health Network (SPHN) project that builds a whole semantic web based ecosystem with defined semantics and schemas for “FAIRyfing” and sharing health-related data across data providers in Switzerland to fit the needs of researchers [Österle et al. 2021]. The phenopackets is a standard built for representing disease and phenotype information. The European Joint Programme on Rare Diseases (EJP RD) is an EU funded research program aimed at accelerating research in the rare disease field. One of the goals of this programme is to FAIRify heterogeneous rare diseases resources by applying FAIR principles. In the EJP RD programme a semantic model of phenopackets [https://github.com/LUMC-BioSemantics/phenopackets-rdf-schema/wiki] has been created to FAIRify phenotypic data. The phenopackets semantic model is created based on design patterns proposed in the Semanticscience Integrated Ontology (SIO). 
+During the biohackathon, the idea came to join forces between these two projects by comparing and mapping the concepts defined in the SPHN consortium with the phenopackets concepts to ease the integration of data coming from one or the other data type and therefore, in the longer term, improve data interoperability across these alternative platforms. The common thread between these two has been the semantic web framework which largely facilitated the mapping exercise. Today, the measurement concept has been mapped between the two data representations and collaboration is now in place to further continue the developments.
+
 
 ## FAIR federated Machine Learning
 
