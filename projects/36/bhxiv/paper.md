@@ -170,8 +170,8 @@ docker inspect 6cd32142e88c | grep -i IPADD
 [^3]:[https://github.com/synthetichealth/synthea/releases/tag/v2.7.0](https://github.com/synthetichealth/synthea/releases/tag/v2.7.0)
 [^4]:https://athena.ohdsi.org/vocabulary/
 
-### Mapping Omop to Phenopackets
 
+### Mapping OMOP to Phenopackets
 In order to create reusable mappings between OMOP and Phenopackets, we first identified the appropriate tables in the OMOP schema for each relevant Phenopacket entity (or "building block"). A number of Phenopacket entities are outside the scope of OMOP, in particular in the area of "Genomic Interpretation". We also excluded the top-level elements of "Family" and "Cohort" as again, these are not within the OMOP scope, which is focused on healthcare data of individual patients.
 
 After an initial review of the two domains, we found that no Phenopacket concept has a direct one-to-one mapping to a single entity in the OMOP CDM. While there are many fields that have a direct equivalence between the two, fields within one Phenopacket entity are usually spread across multiple OMOP tables and vice-versa. In addition, some Phenopackets fields need to be derived or inferred from one or more OMOP fields, especially for time- and date-related fields. For example, Phenopacket's Individual.date\_of\_birth is a concatenation of OMOP's Person.year\_of\_birth, Person.month\_of\_birth and Person.day\_of\_birth if Person.birth\_datetime is not available, while Phenopacket's Treatment.interval.end is derived from OMOP's DrugEra.drug\_exposure\_start\_date and DrugExposure.days\_supply if DrugEra.drug\_exposure\_end\_date is not available. Equally, concepts such as Disease.primary\_site and Disease.laterality need to be derived from multiple entries in the ConditionOccurrence table linked via specific concept relationships. 
@@ -198,7 +198,7 @@ Table 1 shows an overview of the Phenopacket entity to OMOP table mappings. The 
 
 ### SQL script creation
 
-### Omop to Phenopackets in Python
+### OMOP to Phenopackets in Python
 During the hackaton an example of Python code that leverages the mapping and the SQL scripts was created. The code can be found at https://github.com/sasurfer/PyPhenoFromOmop
 and it connects to the Postgres database where it retrieves the data for the chosen patient id. Then the data are serialized into a phenopacket which is written in a file.  The phenopacket fields are limited to the subject and measurements fields, i.e. the mappings present at the time of coding.
 
@@ -209,17 +209,38 @@ During the biohackathon, the idea came to join forces between these two projects
 
 
 ## FAIR federated Machine Learning
+### Federated perspective
+The FAIR principles <REF>, although written with mainly data in mind, are meant to be applied to all sorts of digital objects, i.e., it includes ML pipelines. However, the extent and scope of FAIR ML is still not clear as ML includes at least four elements: model, software, code, and workflows. At this point, when the discussion has recently started, it has not yet been clarified whether applying the FAIR principles to each of these elements, in isolation, would be enough <REF>. The subject probably requires a deeper thought and the ML community is actively working on it with discussions and events around the topic, e.g., at the FAIR Festival 2021 <REF>, at different plenaries of the Research Data Alliance (2021 and 2022), and at the Earth Science Information Partners Summits (2021 and 2022). 
+
+At the BioHackathon Europe 2021 we discussed some expectations and needs around FAIR ML for biomedical research and clinical data. Regarding expectations, we envision an improvement in aspects such as efficiency, transparency and trust, all thanks to the addition of rich metadata to ML approaches. Efficiency can be improved with metadata supporting, e.g.,  (semi)automatics runs of the workflows behind ML models or testing over sample data. Transparency can be improved with metadata clearly describing, e.g., (hyper)parameters, split of the training, validation and test sets, measures to ensure independence, and precision and accuracy obtained. Trust would be improved thanks to the transparency. For the case of supervising ML in biology, there are already some recommendations in this regard, taking into account data, optimization, model and evaluation (DOME recommendations) <REF>, although not yet translated into structured metadata. The translation to structure metadata should hopefully make it easier to apply them in a coherent way so models can be compared to each other under the same parameters. 
+
+Regarding FAIR ML needs, our discussion focused on the sort of minimum metadata would be required for ML approaches in these areas. Although we did not reach a consensus nor a list of minimum fields, we identified some elements that should be taken into consideration. For instance <ToDo>. There are some ongoing efforts in this regard presented by participants in our BioHackathon project. For instance, OWKIN uses CSV files to share descriptive metadata on closed datasets shared across a federated learning environment while the Machine Learning with Ontologies (MOWL) library from the Bio-Ontology Research Group at the King Abdullah University of Science and Technology has defined a metadata schema to describe ML datasets. 
+  
+
+### Patient data (owkin) - CSV input datasets
+At the BioHackathon Europe 2021 we discussed with Owkin, a French-American company that uses artificial intelligence to discover and develop better treatments for cancer. More particularly, Owkin uses privacy-enhancing technologies such as federated learning and federated analytics in settings where data scientists can not see the data. This situation is challenging for data scientists as visualising and cleaning the data before starting to train machine learning on it are very time-consuming steps. If they do not have a clear understanding of  the data format and structure, they will lose time trying to train machine learning models on data they do not understand. 
+
+To overcome this situation, two methods can be developed: 
+
+1. The most straightforward way is to provide data scientists a comprehensive description of the dataset. In case of tabular data, this includes for example the column name, type, description and some values examples. Here is an example taken from the Titanic dataset: 
+<IMG>
+  
+2. Another simple way to give the data scientists information about the dataset without revealing the actual data is to share fake data that have exactly the same format and the same range of values as the actual dataset. The data scientists will then be able to test training models on this fake dataset before trying on the real one.
+  
+  
+### Research data (mowl) - OWL input - workflow - output metadata 
+MOWL library uses datasets in OWL format for its input data and applies machine learning methods for embedding ontologies. It generates output datasets that can further be used as features for other machine learning tasks such as classification and clustering. MOWL has already identified some generic metadata for ML and has aligned it to Schema.org. Schema.org is a community-based project on schemas for structured data on the Internet, e.g., on web pages. MOWL metadata specification aims to cover those elements from ML datasets common to multiple domains, lowering the barrier for researchers to adopt it. The specification includes overview information (identification, name, description, keywords) provenance (creator, contributor, publisher), links to others (citation) and elements aiming to enable reusability (measurement technique, schema or standard it is based on, where it has been evaluated, distribution, size). Another example in this line, that could be adapted for the ML case, is the computational workflow specification provided by Bioschemas, a community extending and tailoring Schema.org for the bioinformatics domain.
+  
+  
+# Discussion
 
 
-Future work includes:
+# Future work includes:
 
 1. documenting the generation of synthetic OMOP database for the community;
 2. extracting and mapping COVID-19 relevant OMOP terms to open bio-ontologies;
 3. modelling and evaluating FAIR federated machine learning.
 
-# Discussion
-
-XXX
 
 ## Acknowledgements
 
