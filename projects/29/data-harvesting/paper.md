@@ -17,23 +17,25 @@ authors:
     affiliation: 2
   - name: Thomas Rosnet
     orcid: 0000-0003-0676-5461
-    affiliation: 2
+    affiliation: 3
   - name: Ivan Mičetić
     orcid: 0000-0003-1691-8425
-    affiliation: 3
+    affiliation: 4
   - name: Sébastien Moretti
     orcid: 0000-0003-3947-488X
-    affiliation: 4
+    affiliation: 5
 
 affiliations:
  - name: Heriot-Watt University, Edinburgh, UK
    index: 1
  - name: Nantes Université, CNRS, INSERM, l’institut du thorax, F-44000 Nantes, France
    index: 2
+ - name: Institut Français de Bioinformatique, CNRS UAR 3601, France
+   index: 3
  - name: University of Padua, Padova, Italy
-   index: 3 
+   index: 4 
  - name: Université de Lausanne, Lausanne, Switzerland
-   index: 4
+   index: 5
 
 date: 11 November 2021
 bibliography: paper.bib
