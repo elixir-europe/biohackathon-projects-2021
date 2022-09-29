@@ -13,6 +13,15 @@ authors:
   - name: Danielle Welter
     orcid: 0000-0003-1058-2668
     affiliation: 3
+  - name: Vasoundra Touré
+    orcid: 0000-0003-4639-4431
+    affiliation: 4
+  - name: Jules Jacobsen
+    orcid: 0000-0002-3265-1591
+    affiliation: 5
+  - name: Tiffany Callahan
+    orcid: 0000-0002-8169-9049
+    affiliation: 6
 affiliations:
   - name: Human Genetics, Leiden University Medical Center, Leiden, Netherlands
     index: 1
@@ -20,6 +29,12 @@ affiliations:
     index: 2
   - name: Luxembourg Centre for Systems Biomedicine, University of Luxembourg, Esch-sur-Alzette, Luxembourg
     index: 3
+  - name: Personalized Health Informatics Group, SIB Swiss Institute of Bioinformatics, Basel, Switzerland
+    index: 4
+  - name: Queen Mary University of London, London, United Kingdom
+    index: 5
+  - name: Computational Bioscience Program, University of COlorado Anschutz Medical Campus, Aurora CO USA
+    index: 6
 date: 11 November 2021
 cito-bibliography: paper.bib
 event: Barcelona2021
