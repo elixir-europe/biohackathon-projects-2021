@@ -22,6 +22,9 @@ authors:
   - name: Tiffany Callahan
     orcid: 0000-0002-8169-9049
     affiliation: 6
+  - name: Leyla Jael Castro
+    orcid: 0000-0003-3986-0510
+    affiliation: 7    
 affiliations:
   - name: Human Genetics, Leiden University Medical Center, Leiden, Netherlands
     index: 1
@@ -35,6 +38,8 @@ affiliations:
     index: 5
   - name: Computational Bioscience Program, University of COlorado Anschutz Medical Campus, Aurora CO USA
     index: 6
+  - name: ZB MED Information Centre for Life Sciences, Cologne, Germany
+    index: 7
 date: 11 November 2021
 cito-bibliography: paper.bib
 event: Barcelona2021
