@@ -23,6 +23,9 @@ authors:
   - name: Dominik Martinát
     orcid: 0000-0001-6611-7883
     affiliation: 5
+  - name: Karel Berka
+    orcid: 0000-0001-9472-2589
+    affiliation: 8
   - name: Nils Hoffmann
     orcid: 0000-0002-6540-6875
     affiliation: 6
@@ -57,6 +60,8 @@ affiliations:
    index: 5
  - name: Boehringer Ingelheim España S.A., Sant Cugat del Vallès, Spain
    index: 7
+ - name: Department of Physical Chemistry, Faculty of Science, Palacký University Olomouc, 17. listopadu 1192/12, 779 00, Olomouc, Czech Republic
+   index: 8
 date: 11 November 2021
 bibliography: paper.bib
 authors_short: FAIR Lipids team
@@ -66,8 +71,7 @@ event: BioHackathon Europe 2021
 
 # Introduction
 
-Data in the lipid world, while free to access suffers from a number of technical barriers 
-to being truly Interoperable and Accessible in the FAIR sense. This makes it harder
+Data in the lipid world, while free to access, suffers from a number of technical barriers to being truly Interoperable and Accessible in the FAIR sense. This makes it harder
 to Reuse these resources.
 
 Team members of SwissLipids, IDSM, MolMedDB, Rhea, UniProt, LIPID MAPS joined by volunteers
