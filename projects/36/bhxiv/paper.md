@@ -7,7 +7,7 @@ authors:
   - name: Núria Queralt-Rosinach
     orcid: 0000-0003-0169-8159
     affiliation: 1
-  - name: Giovanni Delussu 
+  - name: Giovanni Delussu
     orcid: 0000-0002-1023-2257
     affiliation: 2
   - name: Danielle Welter
@@ -72,7 +72,7 @@ pasting above link (or yours) in
 -->
 
 # Introduction
-The COVID-19 crisis demonstrates a critical requirement for rapid and efficient sharing of data to facilitate the global response to this and future pandemics. We can address this challenge by making viral genomic and patient phenomic data FAIR, and formalising it to permit seamless data integration for facilitating data analysis. Phenopackets is a standard file format for sharing phenotypic information that facilitates communication within the research and clinical genomics communities (REF). The OMOP model allows for large-scale analysis of distributed data to generate evidence for research that promotes better health decisions and better care (REF). These gathered data is used by epidemiologists to monitor the infection, model it and make outbreak analysis and predictions to evaluate policy interventions. To harness Machine Learning and Artificial Intelligence approaches to discover meaningful patterns in epidemic outbreaks, we need to ensure that data are FAIR, i.e. data and metadata are accessible and actionable by machines. To leverage data for federated learning/analytics, datasets can be discovered in FAIR Data Points; FAIR data repositories that publish human- and machine-readable metadata for data resources. This project aims to enhance interoperability between health and research data by mapping Phenopackets and OMOP and representing COVID-19 metadata using the FAIR principles to enable discovery, integration and analysis of genotypic and phenotypic data.
+The COVID-19 crisis demonstrates a critical requirement for rapid and efficient sharing of data to facilitate the global response to this and future pandemics. We can address this challenge by making viral genomic and patient phenomic data FAIR, and formalising it to permit seamless data integration for facilitating data analysis. Phenopackets is a standard file format for sharing phenotypic information that facilitates communication within the research and clinical genomics communities \cite{jacobsen2022a}. The OMOP model allows for large-scale analysis of distributed data to generate evidence for research that promotes better health decisions and better care \cite{overhage2012a}. These gathered data is used by epidemiologists to monitor the infection, model it and make outbreak analysis and predictions to evaluate policy interventions. To harness Machine Learning and Artificial Intelligence approaches to discover meaningful patterns in epidemic outbreaks, we need to ensure that data are FAIR, i.e. data and metadata are accessible and actionable by machines. To leverage data for federated learning/analytics, datasets can be discovered in FAIR Data Points; FAIR data repositories that publish human- and machine-readable metadata for data resources. This project aims to enhance interoperability between health and research data by mapping Phenopackets and OMOP and representing COVID-19 metadata using the FAIR principles to enable discovery, integration and analysis of genotypic and phenotypic data.
 
 
 <!--
@@ -80,16 +80,16 @@ The COVID-19 crisis demonstrates a critical requirement for rapid and efficient 
 -->
 
 ## OMOP to Phenopackets
-In order to accomplish the mapping between OMOP CDR and Phenopackets the availability of data in OMOP CDR format is extremely useful. However, due to the extreme sensitivity of real patients data, artificial data have been preferred over real ones. 
+In order to accomplish the mapping between OMOP CDR and Phenopackets the availability of data in OMOP CDR format is extremely useful. However, due to the extreme sensitivity of real patients data, artificial data have been preferred over real ones.
 
 ### Population of OMOP CDR tables with synthetic patients data
-The process of populating the OMOP CDR tables of a database can roughly be divided into four steps: 
+The process of populating the OMOP CDR tables of a database can roughly be divided into four steps:
 1. Creation of patients data
 2. Database deployment
 3. Vocabularies retrieval
 5. Transfer of patients data and vocabularies to DB
 
-The choice of the tools needed to accomplish these tasks was facilitated by the familiarity of some group member with Synthea[^1], an open-source, synthetic patient generator. In fact, Synthea has an extension called ETL-Synthea[^2] that loads the data created by the former into a PostgreSQL database, set with OMOP CDR schema. 
+The choice of the tools needed to accomplish these tasks was facilitated by the familiarity of some group member with Synthea[^1], an open-source, synthetic patient generator. In fact, Synthea has an extension called ETL-Synthea[^2] that loads the data created by the former into a PostgreSQL database, set with OMOP CDR schema.
 
 The first step makes use of Synthea version 2.7[^3]. Once downloaded the jar and the source from the link, a csv file with 1000 patients can be created with:
 ```
@@ -99,7 +99,7 @@ where synthea.properties, located in the source code in /pathtosynthea/synthea/s
 ```
 exporter.csv.export = true
 ```
-More recent versions of synthea yield data that can not be ingested by the ETL-Synthea tool only after some columns cutting and editing. 
+More recent versions of synthea yield data that can not be ingested by the ETL-Synthea tool only after some columns cutting and editing.
 
 The next step is to set up a Postgres db. Probably the easiest way is to create a docker container. After installing docker and docker-compose a yaml file like the following can be used:
 ```
@@ -118,7 +118,7 @@ services:
       - db-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
- 
+
   pgadmin:
     image: dpage/pgadmin4:4.18
     restart: "no"
@@ -155,11 +155,11 @@ devtools::install_github("OHDSI/ETL-Synthea")
 library(ETLSyntheaBuilder)
 devtools::install_github("OHDSI/CommonDataModel", "v5.4")
 cd <- DatabaseConnector::createConnectionDetails(
-  dbms     = "postgresql", 
-  server   = "172.23.0.2/synthea10", 
+  dbms     = "postgresql",
+  server   = "172.23.0.2/synthea10",
   pathToDriver = "/tmp/",
-  user     = "postgres", 
-  password = "lollipop", 
+  user     = "postgres",
+  password = "lollipop",
   port     = 5432
 )
 cdmSchema      <- "cdm_synthea10"
@@ -170,13 +170,13 @@ syntheaFileLoc <- "/tmp/output/csv"
 vocabFileLoc   <- "/tmp/Vocabulary_restricted"
 
 ETLSyntheaBuilder::CreateCDMTables(connectionDetails = cd, cdmSchema = cdmSchema, cdmVersion = cdmVersion)
-                                     
+
 ETLSyntheaBuilder::CreateSyntheaTables(connectionDetails = cd, syntheaSchema = syntheaSchema, syntheaVersion = syntheaVersion)
-                                       
+
 ETLSyntheaBuilder::LoadSyntheaTables(connectionDetails = cd, syntheaSchema = syntheaSchema, syntheaFileLoc = syntheaFileLoc)
-                                     
+
 ETLSyntheaBuilder::LoadVocabFromCsv(connectionDetails = cd, cdmSchema = cdmSchema, vocabFileLoc = vocabFileLoc)
-                                    
+
 ETLSyntheaBuilder::LoadEventTables(connectionDetails = cd, cdmSchema = cdmSchema, syntheaSchema = syntheaSchema, cdmVersion = cdmVersion, syntheaVersion = syntheaVersion)
 ```
 
@@ -186,8 +186,8 @@ docker ps #get the db container name e.g. 6cd32142e88c
 docker inspect 6cd32142e88c | grep -i IPADD
 ```
 "pathToDriver" have to filled with the path to the postgresql java driver. For the version included in the yaml shown postgresql-42.3.1.jar is the right choice and can be downloaded from https://jdbc.postgresql.org/download.html
-"user" and "password" are the same set in the yaml by the name of "POSTGRES_USER" and "POSTGRES_PASSWORD". 
-"syntheaFileLoc" is the path to the directory containing the synthetic data created with Synthea whereas "vocabFileLoc" points to the path of the directory with the vocabularies. 
+"user" and "password" are the same set in the yaml by the name of "POSTGRES_USER" and "POSTGRES_PASSWORD".
+"syntheaFileLoc" is the path to the directory containing the synthetic data created with Synthea whereas "vocabFileLoc" points to the path of the directory with the vocabularies.
 
 
 [^1]:[https://synthetichealth.github.io/synthea/](https://synthetichealth.github.io/synthea/)
@@ -199,7 +199,7 @@ docker inspect 6cd32142e88c | grep -i IPADD
 ### Mapping OMOP to Phenopackets
 In order to create reusable mappings between OMOP and Phenopackets, we first identified the appropriate tables in the OMOP schema for each relevant Phenopacket entity (or "building block"). A number of Phenopacket entities are outside the scope of OMOP, in particular in the area of "Genomic Interpretation". We also excluded the top-level elements of "Family" and "Cohort" as again, these are not within the OMOP scope, which is focused on healthcare data of individual patients.
 
-After an initial review of the two domains, we found that no Phenopacket concept has a direct one-to-one mapping to a single entity in the OMOP CDM. While there are many fields that have a direct equivalence between the two, fields within one Phenopacket entity are usually spread across multiple OMOP tables and vice-versa. In addition, some Phenopackets fields need to be derived or inferred from one or more OMOP fields, especially for time- and date-related fields. For example, Phenopacket's Individual.date\_of\_birth is a concatenation of OMOP's Person.year\_of\_birth, Person.month\_of\_birth and Person.day\_of\_birth if Person.birth\_datetime is not available, while Phenopacket's Treatment.interval.end is derived from OMOP's DrugEra.drug\_exposure\_start\_date and DrugExposure.days\_supply if DrugEra.drug\_exposure\_end\_date is not available. Equally, concepts such as Disease.primary\_site and Disease.laterality need to be derived from multiple entries in the ConditionOccurrence table linked via specific concept relationships. 
+After an initial review of the two domains, we found that no Phenopacket concept has a direct one-to-one mapping to a single entity in the OMOP CDM. While there are many fields that have a direct equivalence between the two, fields within one Phenopacket entity are usually spread across multiple OMOP tables and vice-versa. In addition, some Phenopackets fields need to be derived or inferred from one or more OMOP fields, especially for time- and date-related fields. For example, Phenopacket's Individual.date\_of\_birth is a concatenation of OMOP's Person.year\_of\_birth, Person.month\_of\_birth and Person.day\_of\_birth if Person.birth\_datetime is not available, while Phenopacket's Treatment.interval.end is derived from OMOP's DrugEra.drug\_exposure\_start\_date and DrugExposure.days\_supply if DrugEra.drug\_exposure\_end\_date is not available. Equally, concepts such as Disease.primary\_site and Disease.laterality need to be derived from multiple entries in the ConditionOccurrence table linked via specific concept relationships.
 
 Differentiating between PhenotypicFeature and Disease posed another mapping challenge as a lot of concept in OMOP ConditionOccurrence are more aligned with the concept of phenotypic feature than disease (eg cerebrovasuclar accident, atrial fibrillation). We were faced with either having to declare a set equivalence between ConditionOccurrence and one of the Phenopacket entities or using query refinements to assess each ConditionOccurrence against ontologies such as HPO and MONDO in order to determine the correct Phenopackets concept for each mapping.
 
@@ -222,7 +222,7 @@ Table 1 shows an overview of the Phenopacket entity to OMOP table mappings. The 
 
 
 ### SQL script creation
-We created a series of SQL scripts that formalize the schema mappings identified in the previous step to automatically map OMOP data instances to Phenopackets elements instances. 
+We created a series of SQL scripts that formalize the schema mappings identified in the previous step to automatically map OMOP data instances to Phenopackets elements instances.
 
 ### OMOP to Phenopackets in Python
 During the hackaton an example of Python code that leverages the mapping and the SQL scripts was created. The code can be found at [https://github.com/sasurfer/PyPhenoFromOmop]
@@ -234,39 +234,39 @@ One of the outcomes from the hackathon subgroups was the creation of a Java web-
 
 ## OMOP to Phenopackets for the Semantic Web
 ### Modelling semantic Phenopackets for EJP RD and SPHN
-Semantic web technologies are being extensively used in the modelling of clinical data resources to fulfill the FAIR criteria. This is the case in the Swiss Personalized Health Network (SPHN) project that builds a whole semantic web based ecosystem with defined semantics and schemas for “FAIRyfing” and sharing health-related data across data providers in Switzerland to fit the needs of researchers (Österle et al. 2021)[https://www.preprints.org/manuscript/202109.0505/v1]. The phenopackets is a standard built for representing disease and phenotype information. The European Joint Programme on Rare Diseases (EJP~RD)[https://www.ejprarediseases.org/] is an EU funded research programme aimed at accelerating research in the rare disease field. One of the goals of this programme is to FAIRify heterogeneous rare diseases resources by applying FAIR principles. In the EJP RD programme a semantic model of phenopackets [https://github.com/LUMC-BioSemantics/phenopackets-rdf-schema/wiki] has been created to FAIRify phenotypic data. The phenopackets semantic model is created based on design patterns proposed in the Semanticscience Integrated Ontology (SIO) (REF). 
+Semantic web technologies are being extensively used in the modelling of clinical data resources to fulfill the FAIR criteria. This is the case in the Swiss Personalized Health Network (SPHN) project that builds a whole semantic web based ecosystem with defined semantics and schemas for “FAIRyfing” and sharing health-related data across data providers in Switzerland to fit the needs of researchers (Österle et al. 2021)[https://www.preprints.org/manuscript/202109.0505/v1]. The phenopackets is a standard built for representing disease and phenotype information. The European Joint Programme on Rare Diseases (EJP~RD)[https://www.ejprarediseases.org/] is an EU funded research programme aimed at accelerating research in the rare disease field. One of the goals of this programme is to FAIRify heterogeneous rare diseases resources by applying FAIR principles. In the EJP RD programme a semantic model of phenopackets [https://github.com/LUMC-BioSemantics/phenopackets-rdf-schema/wiki] has been created to FAIRify phenotypic data. The phenopackets semantic model is created based on design patterns proposed in the Semanticscience Integrated Ontology (SIO) \cite{sio-dp-measurements}.
 During the biohackathon, the idea came to join forces between these two projects by comparing and mapping the concepts defined in the SPHN consortium with the phenopackets concepts to ease the integration of data coming from one or the other data type and therefore, in the longer term, improve data interoperability across these alternative platforms. The common thread between these two has been the semantic web framework which largely facilitated the mapping exercise. Today, the measurement concept has been mapped between the two data representations and collaboration is now in place to further continue the developments.
 
 ### OMOP to EJP RD semantic model ETL pipeline
-Also during the biohackathon, we did mapping activities across OMOP CDM and EJP RD Common Data Elements (CDE) semantic models (REF) and we explored a transformation pipeline. As a way to investigate the harmonization between both schemas, we proposed R2RML (REF) templates to define the structure of the CDE semantic models. RDF data based on dummy OMOP data stored in a PostgreSQL database was obtained by using these templates. In order to obtain the required R2RML templates, those were created by the use of Ontop framework (REF). GraphDB (REF) repository acted as a bridge between hosted OMOP data in a Postgres database and R2RML templates exposed via a virtual SPARQL endpoint where RDF can be queried. Mapping OMOP to CDE semantic model is a first step to map EJP~RD semantic model to semantic Phenopackets.
+Also during the biohackathon, we did mapping activities across OMOP CDM and EJP RD Common Data Elements (CDE) semantic models \cite{kaliyaperumal2022a} and we explored a transformation pipeline. As a way to investigate the harmonization between both schemas, we proposed R2RML (REF) templates to define the structure of the CDE semantic models. RDF data based on dummy OMOP data stored in a PostgreSQL database was obtained by using these templates. In order to obtain the required R2RML templates, those were created by the use of Ontop framework (REF). GraphDB (REF) repository acted as a bridge between hosted OMOP data in a Postgres database and R2RML templates exposed via a virtual SPARQL endpoint where RDF can be queried. Mapping OMOP to CDE semantic model is a first step to map EJP~RD semantic model to semantic Phenopackets.
 
 
 ## FAIR federated Machine Learning
 ### Federated perspective
-The FAIR principles <REF>, although written with mainly data in mind, are meant to be applied to all sorts of digital objects, i.e., it includes ML pipelines. However, the extent and scope of FAIR ML is still not clear as ML includes at least four elements: model, software, code, and workflows. At this point, when the discussion has recently started, it has not yet been clarified whether applying the FAIR principles to each of these elements, in isolation, would be enough <REF>. The subject probably requires a deeper thought and the ML community is actively working on it with discussions and events around the topic, e.g., at the FAIR Festival 2021 <REF>, at different plenaries of the Research Data Alliance (2021 and 2022), and at the Earth Science Information Partners Summits (2021 and 2022). 
+The FAIR principles <REF>, although written with mainly data in mind, are meant to be applied to all sorts of digital objects, i.e., it includes ML pipelines. However, the extent and scope of FAIR ML is still not clear as ML includes at least four elements: model, software, code, and workflows. At this point, when the discussion has recently started, it has not yet been clarified whether applying the FAIR principles to each of these elements, in isolation, would be enough <REF>. The subject probably requires a deeper thought and the ML community is actively working on it with discussions and events around the topic, e.g., at the FAIR Festival 2021 <REF>, at different plenaries of the Research Data Alliance (2021 and 2022), and at the Earth Science Information Partners Summits (2021 and 2022).
 
-At the BioHackathon Europe 2021 we discussed some expectations and needs around FAIR ML for biomedical research and clinical data. Regarding expectations, we envision an improvement in aspects such as efficiency, transparency and trust, all thanks to the addition of rich metadata to ML approaches. Efficiency can be improved with metadata supporting, e.g., (semi)automatics runs of the workflows behind ML models or testing over sample data. Transparency can be improved with metadata clearly describing, e.g., (hyper)parameters, split of the training, validation and test sets, measures to ensure independence, and precision and accuracy obtained. Trust would be improved thanks to the transparency. For the case of supervising ML in biology, there are already some recommendations in this regard, taking into account data, optimization, model and evaluation (DOME recommendations) <REF>, although not yet translated into structured metadata. The translation to structure metadata should hopefully make it easier to apply them in a coherent way so models can be compared to each other under the same parameters. 
+At the BioHackathon Europe 2021 we discussed some expectations and needs around FAIR ML for biomedical research and clinical data. Regarding expectations, we envision an improvement in aspects such as efficiency, transparency and trust, all thanks to the addition of rich metadata to ML approaches. Efficiency can be improved with metadata supporting, e.g., (semi)automatics runs of the workflows behind ML models or testing over sample data. Transparency can be improved with metadata clearly describing, e.g., (hyper)parameters, split of the training, validation and test sets, measures to ensure independence, and precision and accuracy obtained. Trust would be improved thanks to the transparency. For the case of supervising ML in biology, there are already some recommendations in this regard, taking into account data, optimization, model and evaluation (DOME recommendations) <REF>, although not yet translated into structured metadata. The translation to structure metadata should hopefully make it easier to apply them in a coherent way so models can be compared to each other under the same parameters.
 
-Regarding FAIR ML needs, our discussion focused on the sort of minimum metadata would be required for ML approaches in these areas. Although we did not reach a consensus nor a list of minimum fields, we identified some elements that should be taken into consideration. For instance <ToDo>. There are some ongoing efforts in this regard presented by participants in our BioHackathon project. For instance, OWKIN uses CSV files to share descriptive metadata on closed datasets shared across a federated learning environment while the (Machine Learning with Ontologies (MOWL))[https://github.com/bio-ontology-research-group/mowl] library from the Bio-Ontology Research Group at the King Abdullah University of Science and Technology has defined a metadata schema to describe ML datasets. 
-  
+Regarding FAIR ML needs, our discussion focused on the sort of minimum metadata would be required for ML approaches in these areas. Although we did not reach a consensus nor a list of minimum fields, we identified some elements that should be taken into consideration. For instance <ToDo>. There are some ongoing efforts in this regard presented by participants in our BioHackathon project. For instance, OWKIN uses CSV files to share descriptive metadata on closed datasets shared across a federated learning environment while the (Machine Learning with Ontologies (MOWL))[https://github.com/bio-ontology-research-group/mowl] library from the Bio-Ontology Research Group at the King Abdullah University of Science and Technology has defined a metadata schema to describe ML datasets.
+
 
 ### Patient data: federated learning with Owkin - CSV input datasets
 At the BioHackathon Europe 2021 we discussed with Owkin, a French-American company that uses artificial intelligence to discover and develop better treatments for cancer. More particularly, Owkin uses privacy-enhancing technologies such as federated learning and federated analytics in settings where data scientists cannot see the data. This situation is challenging for data scientists as visualising and cleaning the data before starting to train machine learning on it are very time-consuming steps. However, this is a key step in ML pipelines since if they do not have a clear understanding of  the data format and structure, they will lose time trying to train machine learning models on data they do not understand.
 
-To overcome this situation, two methods can be developed: 
+To overcome this situation, two methods can be developed:
 
 1. The most straightforward way is to provide data scientists a comprehensive description of the dataset. In case of tabular data, this includes for example the column name, type, description and some values examples. Here is an example taken from the (Titanic dataset)[https://www.kaggle.com/c/titanic]:  
 <IMG>
-  
+
 2. Another simple way to give the data scientists information about the dataset without revealing the actual data is to share fake and also called synthetic data that have exactly the same format and the same range of values as the actual dataset and it is a privacy-preserving strategy. The data scientists will then be able to test training models on this fake dataset before trying on the real one.
-  
-  
-### Research data: ML workflows using MOWL - OWL input - output metadata 
+
+
+### Research data: ML workflows using MOWL - OWL input - output metadata
 MOWL library uses datasets in OWL format for its input data and applies machine learning methods for embedding ontologies. It generates output datasets that can further be used as features for other machine learning tasks such as classification and clustering. MOWL has already identified some generic metadata for ML and has aligned it to (Schema.org)[https://schema.org/]. Schema.org is a community-based project on schemas for structured data on the Internet, e.g., on web pages. MOWL metadata specification aims to cover those elements from ML datasets common to multiple domains, lowering the barrier for researchers to adopt it. The specification includes overview information (identification, name, description, keywords) provenance (creator, contributor, publisher), links to others (citation) and elements aiming to enable reusability (measurement technique, schema or standard it is based on, where it has been evaluated, distribution, size). Another example in this line, that could be adapted for the ML case, is the (computational workflow specification)[https://bioschemas.org/types/ComputationalWorkflow/1.0-RELEASE] provided by (Bioschemas)[https://bioschemas.org/], a community extending and tailoring Schema.org for the bioinformatics domain.
-  
-  
+
+
 # Discussion
-Our achievements during the 2021 BioHackathon cover subjects related to mapping concepts across health data formats (standards and terminologies), federated ML and metadata for ML.. First, we achieved our main goal to map concepts from the OHDSI OMOP to elements in the GA4GH Phenopacket schema. We mapped schemas, generated a database of synthetic health data represented in the OMOP CDM by means of Synthea and published our workflow on GitHub so it could be reused by the community, generated mapping queries in SQL, and created a prototype for a Phenopacket builder. Second, we stemmed work to map both standards to the Semantic Web, in particular we started modelling semantic Phenopackets incorporating SPHN requirements and working on the ETL transformation of OMOP to the semantic model of the rare disease patient registry data in EJP RD, which will enable mapping to semantic Phenopackets. Third, we started discussing FAIR federated ML and we detected common expectations and needs. We did this with the enriching experience of exchanging different strategies utilised among different academia and industry organizations. Last, we recognized the FAIRification of ML is indeed a challenging issue that requires a broader community discussion, involving several stakeholder representatives to facilitate agreements on standards such as the DOME recommendations or Schema.org, technologies such as OWL, infrastructure such as FAIR Data Points, and evaluation methods such as benchmarks, and arguably, more events like the Biohackathon to support all of these endeavors. It is worth highlighting that these outcomes are the seed for different collaborations. 
+Our achievements during the 2021 BioHackathon cover subjects related to mapping concepts across health data formats (standards and terminologies), federated ML and metadata for ML.. First, we achieved our main goal to map concepts from the OHDSI OMOP to elements in the GA4GH Phenopacket schema. We mapped schemas, generated a database of synthetic health data represented in the OMOP CDM by means of Synthea and published our workflow on GitHub so it could be reused by the community, generated mapping queries in SQL, and created a prototype for a Phenopacket builder. Second, we stemmed work to map both standards to the Semantic Web, in particular we started modelling semantic Phenopackets incorporating SPHN requirements and working on the ETL transformation of OMOP to the semantic model of the rare disease patient registry data in EJP RD, which will enable mapping to semantic Phenopackets. Third, we started discussing FAIR federated ML and we detected common expectations and needs. We did this with the enriching experience of exchanging different strategies utilised among different academia and industry organizations. Last, we recognized the FAIRification of ML is indeed a challenging issue that requires a broader community discussion, involving several stakeholder representatives to facilitate agreements on standards such as the DOME recommendations or Schema.org, technologies such as OWL, infrastructure such as FAIR Data Points, and evaluation methods such as benchmarks, and arguably, more events like the Biohackathon to support all of these endeavors. It is worth highlighting that these outcomes are the seed for different collaborations.
 
 The BioHackathon provided an appropriate environment to generate outcomes, to discuss current needs and challenges among different stakeholders, and to start talking about collaborations crossing boarders not only within Europe but also to the US, and crossing projects such as SPHN and EJP RD. Importantly, it also provided an opportunity to present and discuss late-breaking results, cutting-edge technologies, on-going projects, and to develop innovative prototypes. The informal setting of the sessions encouraged presenters and participants to engage in discussions about the presented projects. Such discussions provided invaluable inputs for the ongoing and future work of the projects, while offering participants an effective way to broaden their knowledge of the emerging research trends and technologies and to start collaborations with other researchers in academia and industry. This also came with some challenges as the hybrid meeting required communication across the different intercontinental time zones. Our project had 17 participants (10 onsite and 7 online) from different countries and projects/organizations such as the UK, US, NL, SP or CH. We engaged with 10 participants that were new to the project, and 10 that were new to the BioHackathon-EU. We interacted with the #17 BHEU project to discuss GA4GH Beacon API interoperability with GA4GH Phenopackets data standard and the #27 and #30 BHEU projects and with the OWKIN company to discuss FAIR machine learning, with the N3C consortium in the US and EGA in EU to provision COVID-19 datasets, with the SPHN project another health data project based on Semantic Web Technologies and FAIR, and we investigated the interoperability of data represented as semantic Phenopackets with the EJP RD project.
 
