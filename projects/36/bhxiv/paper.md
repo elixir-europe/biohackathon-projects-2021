@@ -25,6 +25,9 @@ authors:
   - name: Leyla Jael Castro
     orcid: 0000-0003-3986-0510
     affiliation: 7    
+  - name: Anastasios Siapos
+    orcid: 0000-0001-6753-6764
+    affiliation: 8
 affiliations:
   - name: Human Genetics, Leiden University Medical Center, Leiden, Netherlands
     index: 1
@@ -40,6 +43,8 @@ affiliations:
     index: 6
   - name: ZB MED Information Centre for Life Sciences, Cologne, Germany
     index: 7
+  - name: Lifebit Biotech Ltd, London, UK
+    index: 8   
 date: 11 November 2021
 cito-bibliography: paper.bib
 event: Barcelona2021
