@@ -39,7 +39,7 @@ affiliations:
     index: 4
   - name: Queen Mary University of London, London, United Kingdom
     index: 5
-  - name: Computational Bioscience Program, University of COlorado Anschutz Medical Campus, Aurora CO USA
+  - name: Department of Biomedical Informatics, Columbia University Irving Medical Campus, New York NY USA
     index: 6
   - name: ZB MED Information Centre for Life Sciences, Cologne, Germany
     index: 7
