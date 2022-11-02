@@ -7,44 +7,75 @@ authors:
   - name: Núria Queralt-Rosinach
     orcid: 0000-0003-0169-8159
     affiliation: 1
-  - name: Giovanni Delussu
-    orcid: 0000-0002-1023-2257
+  - name: Pablo Alarcón
+    orcid:
     affiliation: 2
-  - name: Danielle Welter
-    orcid: 0000-0003-1058-2668
-    affiliation: 3
-  - name: Vasoundra Touré
-    orcid: 0000-0003-4639-4431
-    affiliation: 4
-  - name: Jules Jacobsen
-    orcid: 0000-0002-3265-1591
-    affiliation: 5
   - name: Tiffany Callahan
     orcid: 0000-0002-8169-9049
+    affiliation: 3
+  - name: Giovanni Delussu
+    orcid: 0000-0002-1023-2257
+    affiliation: 4
+  - name: Charlotte Fraboulet
+    orcid:  
+    affiliation: 5
+  - name: Romain Goussault
+    orcid:  
+    affiliation: 5
+  - name: Jules Jacobsen
+    orcid: 0000-0002-3265-1591
     affiliation: 6
   - name: Leyla Jael Castro
     orcid: 0000-0003-3986-0510
     affiliation: 7    
+  - name: Rajaram Kaliyaperumal
+    orcid: 0000-0002-1215-167X
+    affiliation: 1
+  - name: Maxat Kulmanov
+    orcid:
+    affiliation: 8
+  - name: Peter Robinson
+    orcid: 0000-0002-0736-9199  
+    affiliation: 9
+  - name: Venkata Satagopam
+    orcid:
+    affiliation: 10
   - name: Anastasios Siapos
     orcid: 0000-0001-6753-6764
-    affiliation: 8
+    affiliation: 11
+  - name: Vasoundra Touré
+    orcid: 0000-0003-4639-4431
+    affiliation: 12
+  - name: Danielle Welter
+    orcid: 0000-0003-1058-2668
+    affiliation: 13
 affiliations:
   - name: Human Genetics, Leiden University Medical Center, Leiden, Netherlands
     index: 1
-  - name: Digital Health Group, CRS4 Center for Advanced Studies, Research and Development in Sardinia, Pula, Italy
+  - name:
     index: 2
-  - name: Luxembourg Centre for Systems Biomedicine, University of Luxembourg, Esch-sur-Alzette, Luxembourg
-    index: 3
-  - name: Personalized Health Informatics Group, SIB Swiss Institute of Bioinformatics, Basel, Switzerland
-    index: 4
-  - name: Queen Mary University of London, London, United Kingdom
-    index: 5
   - name: Department of Biomedical Informatics, Columbia University Irving Medical Campus, New York NY USA
+    index: 3
+  - name: Digital Health Group, CRS4 Center for Advanced Studies, Research and Development in Sardinia, Pula, Italy
+    index: 4
+  - name: Owkin
+    index: 5
+  - name: Queen Mary University of London, London, United Kingdom
     index: 6
   - name: ZB MED Information Centre for Life Sciences, Cologne, Germany
     index: 7
-  - name: Lifebit Biotech Ltd, London, UK
+  - name: King Abdullah University of Science and Technology, Thuwal, Kingdom of Saudi Arabia
     index: 8   
+  - name: Genomic Medicine, The Jackson Laboratory, Farmington, CT, USA
+    index: 9
+  - name:
+    index: 10
+  - name: Lifebit Biotech Ltd, London, UK
+    index: 11
+  - name: Personalized Health Informatics Group, SIB Swiss Institute of Bioinformatics, Basel, Switzerland
+    index: 12
+  - name: Luxembourg Centre for Systems Biomedicine, University of Luxembourg, Esch-sur-Alzette, Luxembourg
+    index: 13
 date: 11 November 2021
 cito-bibliography: paper.bib
 event: Barcelona2021
@@ -72,7 +103,7 @@ pasting above link (or yours) in
 -->
 
 # Introduction
-The COVID-19 crisis demonstrates a critical requirement for rapid and efficient sharing of data to facilitate the global response to this and future pandemics. We can address this challenge by making viral genomic and patient phenomic data FAIR, and formalising it to permit seamless data integration for facilitating data analysis. Phenopackets is a standard file format for sharing phenotypic information that facilitates communication within the research and clinical genomics communities [@jacobsen2022a]. The OMOP model allows for large-scale analysis of distributed data to generate evidence for research that promotes better health decisions and better care [@overhage2012a]. These gathered data is used by epidemiologists to monitor the infection, model it and make outbreak analysis and predictions to evaluate policy interventions. To harness Machine Learning and Artificial Intelligence approaches to discover meaningful patterns in epidemic outbreaks, we need to ensure that data are FAIR, i.e. data and metadata are accessible and actionable by machines. To leverage data for federated learning/analytics, datasets can be discovered in FAIR Data Points; FAIR data repositories that publish human- and machine-readable metadata for data resources. This project aims to enhance interoperability between health and research data by mapping Phenopackets and OMOP and representing COVID-19 metadata using the FAIR principles to enable discovery, integration and analysis of genotypic and phenotypic data.
+The COVID-19 crisis demonstrates a critical requirement for rapid and efficient sharing of data to facilitate the global response to this and future pandemics. We can address this challenge by making viral genomic and patient phenomic data FAIR, and formalising it to permit seamless data integration for facilitating data analysis. Phenopackets is a standard file format for sharing phenotypic information that facilitates communication within the research and clinical genomics communities [@jacobsen2022a]. The OMOP model allows for large-scale analysis of distributed data to generate evidence for research that promotes better health decisions and better care [@overhage2012a]. These gathered data is used by epidemiologists to monitor the infection, model it and make outbreak analysis and predictions to evaluate policy interventions. To harness Machine Learning (ML) and Artificial Intelligence (AI) approaches to discover meaningful patterns in epidemic outbreaks, we need to ensure that data are FAIR, i.e. data and metadata are accessible and actionable by machines. To leverage data for federated learning/analytics, datasets can be discovered in FAIR Data Points; FAIR data repositories that publish human- and machine-readable metadata for data resources. This project aims to enhance interoperability between health and research data by mapping Phenopackets and OMOP and representing COVID-19 metadata using the FAIR principles to enable discovery, integration and analysis of genotypic and phenotypic data.
 
 
 <!--
@@ -234,7 +265,7 @@ One of the outcomes from the hackathon subgroups was the creation of a Java web-
 
 ## OMOP to Phenopackets for the Semantic Web
 ### Modelling semantic Phenopackets for EJP RD and SPHN
-Semantic web technologies are being extensively used in the modelling of clinical data resources to fulfill the FAIR criteria. This is the case in the Swiss Personalized Health Network (SPHN) project that builds a whole semantic web based ecosystem with defined semantics and schemas for “FAIRyfing” and sharing health-related data across data providers in Switzerland to fit the needs of researchers [@oesterle2021a]. The phenopackets is a standard built for representing disease and phenotype information. The European Joint Programme on Rare Diseases [EJP~RD](https://www.ejprarediseases.org/) is an EU funded research programme aimed at accelerating research in the rare disease field. One of the goals of this programme is to FAIRify heterogeneous rare diseases resources by applying FAIR principles. In the EJP RD programme a semantic model of phenopackets https://github.com/LUMC-BioSemantics/phenopackets-rdf-schema/wiki has been created to FAIRify phenotypic data. The phenopackets semantic model is created based on design patterns proposed in the Semanticscience Integrated Ontology (SIO) [@sio-dp-measurements].
+Semantic web technologies are being extensively used in the modelling of clinical data resources to fulfill the FAIR criteria. This is the case in the Swiss Personalized Health Network (SPHN) project that builds a whole semantic web based ecosystem with defined semantics and schemas for “FAIRyfing” and sharing health-related data across data providers in Switzerland to fit the needs of researchers [@oesterle2021a]. The phenopackets is a standard built for representing disease and phenotype information. The European Joint Programme on Rare Diseases [EJP RD](https://www.ejprarediseases.org/) is an EU funded research programme aimed at accelerating research in the rare disease field. One of the goals of this programme is to FAIRify heterogeneous rare diseases resources by applying FAIR principles. In the EJP RD programme a semantic model of phenopackets https://github.com/LUMC-BioSemantics/phenopackets-rdf-schema/wiki has been created to FAIRify phenotypic data. The phenopackets semantic model is created based on design patterns proposed in the Semanticscience Integrated Ontology (SIO) [@sio-dp-measurements].
 During the biohackathon, the idea came to join forces between these two projects by comparing and mapping the concepts defined in the SPHN consortium with the phenopackets concepts to ease the integration of data coming from one or the other data type and therefore, in the longer term, improve data interoperability across these alternative platforms. The common thread between these two has been the semantic web framework which largely facilitated the mapping exercise. Today, the measurement concept has been mapped between the two data representations and collaboration is now in place to further continue the developments.
 
 ### OMOP to EJP RD semantic model ETL pipeline
@@ -247,16 +278,16 @@ The FAIR principles [@wilkinson2016a], although written with mainly data in mind
 
 At the BioHackathon Europe 2021 we discussed some expectations and needs around FAIR ML for biomedical research and clinical data. Regarding expectations, we envision an improvement in aspects such as efficiency, transparency and trust, all thanks to the addition of rich metadata to ML approaches. Efficiency can be improved with metadata supporting, e.g., (semi)automatics runs of the workflows behind ML models or testing over sample data. Transparency can be improved with metadata clearly describing, e.g., (hyper)parameters, split of the training, validation and test sets, measures to ensure independence, and precision and accuracy obtained. Trust would be improved thanks to the transparency. For the case of supervising ML in biology, there are already some recommendations in this regard, taking into account data, optimization, model and evaluation (DOME recommendations) [@walsh2021a], although not yet translated into structured metadata. The translation to structure metadata should hopefully make it easier to apply them in a coherent way so models can be compared to each other under the same parameters.
 
-Regarding FAIR ML needs, our discussion focused on the sort of minimum metadata would be required for ML approaches in these areas. Although we did not reach a consensus nor a list of minimum fields, we identified some elements that should be taken into consideration. For instance <ToDo>. There are some ongoing efforts in this regard presented by participants in our BioHackathon project. For instance, OWKIN uses CSV files to share descriptive metadata on closed datasets shared across a federated learning environment while the [Machine Learning with Ontologies (MOWL)](https://github.com/bio-ontology-research-group/mowl) library from the Bio-Ontology Research Group at the King Abdullah University of Science and Technology has defined a metadata schema to describe ML datasets.
+Regarding FAIR ML needs, our discussion focused on the sort of minimum metadata that would be required for ML approaches in these areas, with special emphasis for federated learning on sensitive health data. Although we did not reach a consensus nor a list of minimum fields, we identified some elements that should be taken into consideration. On one hand, input and output datasets’ metadata for the algorithm (algorithm view) or, in other words, what the algorithm needs to know about the datasets to reuse them. For instance, fields that describe the _format_, _distribution_, _theme_, _data-schema_, or _embedding size_ of the dataset. On the other hand, algorithm metadata for the data provider (data view) such as fields that describe the action that the algorithm performs on data, e.g _data pre-processing_ or _word2vec embedding_, or the query that the algorithm sends to data. There are some ongoing efforts in this regard presented by participants in our BioHackathon project. Owkin uses CSV files to share descriptive metadata on closed datasets shared across a federated learning environment while the [Machine Learning with Ontologies (MOWL)](https://github.com/bio-ontology-research-group/mowl) library from the Bio-Ontology Research Group at the King Abdullah University of Science and Technology has defined a metadata schema to describe ML datasets.
 
 
 ### Patient data: federated learning with Owkin - CSV input datasets
-At the BioHackathon Europe 2021 we discussed with Owkin, a French-American company that uses artificial intelligence to discover and develop better treatments for cancer. More particularly, Owkin uses privacy-enhancing technologies such as federated learning and federated analytics in settings where data scientists cannot see the data. This situation is challenging for data scientists as visualising and cleaning the data before starting to train machine learning on it are very time-consuming steps. However, this is a key step in ML pipelines since if they do not have a clear understanding of  the data format and structure, they will lose time trying to train machine learning models on data they do not understand.
+At the BioHackathon Europe 2021 we discussed with Owkin, a French-American company that uses AI to discover and develop better treatments for cancer. More particularly, Owkin uses privacy-enhancing technologies such as federated learning and federated analytics in settings where data scientists cannot see the data. This situation is challenging for data scientists as visualising and cleaning the data before starting to train machine learning on it are very time-consuming steps. However, this is a key step in ML pipelines since if they do not have a clear understanding of the data format and structure, they will lose time trying to train machine learning models on data they do not understand.
 
 To overcome this situation, two methods can be developed:
 
 1. The most straightforward way is to provide data scientists a comprehensive description of the dataset. In case of tabular data, this includes for example the column name, type, description and some values examples. Here is an example taken from the [Titanic dataset](https://www.kaggle.com/c/titanic):  
-<IMG>
+![Titanic example](./titanic_example.svg)
 
 2. Another simple way to give the data scientists information about the dataset without revealing the actual data is to share fake and also called synthetic data that have exactly the same format and the same range of values as the actual dataset and it is a privacy-preserving strategy. The data scientists will then be able to test training models on this fake dataset before trying on the real one.
 
@@ -279,6 +310,8 @@ To sum up, we achieved our overarching goal of mapping GA4GH Phenopackets and OH
 2. extracting and mapping COVID-19 relevant OMOP terms to open bio-ontologies;
 3. modelling and evaluating FAIR federated machine learning.
 
+## Contributions
+NQR, JJ, PR, VS and KP conceived the initial project. DW, AS, TC and NQR did the OMOP to Phenopackets schema mapping. GD and PR did the generation pipeline of the synthetic OMOP database. AS created the SQL script and jointly with JJ they created the OMOP exporter code. RK, VT, JJ, VS and NQR did the modelling of semantic Phenopackets for Semantic Web based federated health infrastructures. PA and RK did the OMOP to semantic Phenopackets pipeline. RK, CF, RG, MK, LJC and NQR did the FAIR Machine Learning approaches and modelling discussion. NQR and TC drafted the introduction and the discussion sections, and NQR polished a final version of the manuscript. All authors reviewed and approved the final version of the manuscript.
 
 ## Acknowledgements
 
