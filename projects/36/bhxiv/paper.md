@@ -308,7 +308,8 @@ To sum up, we achieved our overarching goal of mapping GA4GH Phenopackets and OH
 
 1. documenting the generation of synthetic OMOP database for the community;
 2. extracting and mapping COVID-19 relevant OMOP terms to open bio-ontologies;
-3. modelling and evaluating FAIR federated machine learning.
+3. modelling and evaluating FAIR federated machine learning;
+4. set up GA4GH Beacon for Phenopackets standard.
 
 ## Contributions
 NQR, JJ, PR, VS and KP conceived the initial project. DW, AS, TC and NQR did the OMOP to Phenopackets schema mapping. GD and PR did the generation pipeline of the synthetic OMOP database. AS created the SQL script and jointly with JJ they created the OMOP exporter code. RK, VT, JJ, VS and NQR did the modelling of semantic Phenopackets for Semantic Web based federated health infrastructures. PA and RK did the OMOP to semantic Phenopackets pipeline. RK, CF, RG, MK, LJC and NQR did the FAIR Machine Learning approaches and modelling discussion. NQR and TC drafted the introduction and the discussion sections, and NQR polished a final version of the manuscript. All authors reviewed and approved the final version of the manuscript.
