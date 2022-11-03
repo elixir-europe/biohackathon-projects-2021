@@ -32,7 +32,7 @@ authors:
     orcid: 0000-0002-1215-167X
     affiliation: 1
   - name: Maxat Kulmanov
-    orcid:
+    orcid: 0000-0003-1710-1820
     affiliation: 8
   - name: Peter Robinson
     orcid: 0000-0002-0736-9199  
