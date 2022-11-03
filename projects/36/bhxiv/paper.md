@@ -234,7 +234,7 @@ After an initial review of the two domains, we found that no Phenopacket concept
 
 Differentiating between PhenotypicFeature and Disease posed another mapping challenge as a lot of concept in OMOP ConditionOccurrence are more aligned with the concept of phenotypic feature than disease (eg cerebrovasuclar accident, atrial fibrillation). We were faced with either having to declare a set equivalence between ConditionOccurrence and one of the Phenopacket entities or using query refinements to assess each ConditionOccurrence against ontologies such as HPO and MONDO in order to determine the correct Phenopackets concept for each mapping.
 
-Table 1 shows an overview of the Phenopacket entity to OMOP table mappings. The full list of mappings is available in appendix 1.
+Table 1 shows an overview of the Phenopacket entity to OMOP table mappings. The full list of mappings is available in [here](https://docs.google.com/document/d/1azjdNkqJ31K7voFH7XP5trkQu85B8Hlb4Okop3A_SYk/edit?usp=sharing).
 
 | Phenopacket Entity | OMOP Tables |
 | ------------------ | ----------- |
