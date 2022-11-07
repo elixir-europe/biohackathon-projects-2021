@@ -171,11 +171,7 @@ The yaml contains the instructions to create the postgres container and a tool f
 ```
 docker-compose up
 ```
-<<<<<<< HEAD
-Then after logging in to the administration tool at http://localhost:8081 it must be created a db called "synthea10" and inside it two schema named "cdm_synthea10" and "native".
-=======
 Then, after logging in to the administration tool at http://localhost:8081, it must be created a database called "synthea10" and inside it two schemas named "cdm_synthea10" and "native".
->>>>>>> b4f81089a7032d208ae1c65a785408e4d1aac565
 
 In the third step we chose the athena site[^4] to download the vocabularies. Accepting all the default vocabularies resulted in a zip file of over 4 GB and an error later in the fourth step. Reducing the vocabularies zip file dimension under 3 GB solved the issue.
 
