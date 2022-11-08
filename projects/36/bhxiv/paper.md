@@ -1,5 +1,5 @@
 ---
-title: 'Mapping GA4GH Phenopackets and OHDSI OMOP for COVID-19 disease epidemics and analytics'
+title: 'Mapping OHDSI OMOP Common Data Model and GA4GH Phenopackets for COVID-19 disease epidemics and analytics'
 title_short: 'OMOP to Phenopackets for COVID-19 analytics'
 tags:
   - Health data
@@ -116,7 +116,7 @@ The COVID-19 crisis demonstrates a critical requirement for rapid and efficient 
 # Results
 -->
 
-## OMOP to Phenopackets
+## OHDSI OMOP to GA4GH Phenopackets
 In order to accomplish the mapping between OMOP CDM and Phenopackets the availability of data in the OMOP CDM format is extremely useful. However, due to the extreme sensitivity of real patients' data, synthetic data have been preferred over real ones.
 
 ### Population of OMOP CDM tables with synthetic patient data
@@ -131,9 +131,11 @@ The choice of the tools needed to accomplish these tasks was facilitated by the 
 
 The first step makes use of Synthea version 2.7[^3]. Once downloaded the `jar` and the source from the prior link, a comma separated values (CSV) file with 1000 patients can be created with:
 ```
-java -jar synthea-with-dependencies.jar -p 1000 -c /pathtosynthea/src/main/resources/synthea.properties
+java -jar synthea-with-dependencies.jar -p 1000 \
+-c /pathtosynthea/src/main/resources/synthea.properties
 ```
-where `synthea.properties`, located in the source code in /pathtosynthea/synthea/src/main/resources/, must be edited in order to export data in csv format.
+where `synthea.properties`, located in the source code in \
+/pathtosynthea/synthea/src/main/resources/, must be edited in order to export data in csv format.
 ```
 exporter.csv.export = true
 ```
@@ -207,15 +209,21 @@ syntheaSchema  <- "native"
 syntheaFileLoc <- "/tmp/output/csv"
 vocabFileLoc   <- "/tmp/Vocabulary_restricted"
 
-ETLSyntheaBuilder::CreateCDMTables(connectionDetails = cd, cdmSchema = cdmSchema, cdmVersion = cdmVersion)
+ETLSyntheaBuilder::CreateCDMTables(connectionDetails \
+  = cd, cdmSchema = cdmSchema, cdmVersion = cdmVersion)
 
-ETLSyntheaBuilder::CreateSyntheaTables(connectionDetails = cd, syntheaSchema = syntheaSchema, syntheaVersion = syntheaVersion)
+ETLSyntheaBuilder::CreateSyntheaTables(connectionDetails \
+  = cd, syntheaSchema = syntheaSchema, syntheaVersion = syntheaVersion)
 
-ETLSyntheaBuilder::LoadSyntheaTables(connectionDetails = cd, syntheaSchema = syntheaSchema, syntheaFileLoc = syntheaFileLoc)
+ETLSyntheaBuilder::LoadSyntheaTables(connectionDetails \
+  = cd, syntheaSchema = syntheaSchema, syntheaFileLoc = syntheaFileLoc)
 
-ETLSyntheaBuilder::LoadVocabFromCsv(connectionDetails = cd, cdmSchema = cdmSchema, vocabFileLoc = vocabFileLoc)
+ETLSyntheaBuilder::LoadVocabFromCsv(connectionDetails \
+  = cd, cdmSchema = cdmSchema, vocabFileLoc = vocabFileLoc)
 
-ETLSyntheaBuilder::LoadEventTables(connectionDetails = cd, cdmSchema = cdmSchema, syntheaSchema = syntheaSchema, cdmVersion = cdmVersion, syntheaVersion = syntheaVersion)
+ETLSyntheaBuilder::LoadEventTables(connectionDetails \
+  = cd, cdmSchema = cdmSchema, syntheaSchema = syntheaSchema, \
+  cdmVersion = cdmVersion, syntheaVersion = syntheaVersion)
 ```
 
 The actual server address in the server line must be replaced with the IP address of your database container. Some commands to retrieve it are:
