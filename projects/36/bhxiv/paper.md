@@ -139,7 +139,7 @@ where `synthea.properties`, located in the source code in \
 ```
 exporter.csv.export = true
 ```
-More recent versions of Synthea yield data that cannot be ingested by the ETL-Synthea tool only, but after some columns' cutting and editing.
+More recent versions of Synthea yield data that cannot be directly ingested by the ETL-Synthea. They need some cutting and editing in order to be ready to be used.
 
 The next step is to set up a PostgreSQL database. Probably the easiest way is to create a docker container. After installing docker and docker-compose a yaml file like the following can be used:
 ```
