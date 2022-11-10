@@ -1,8 +1,15 @@
 ---
-title: 'Mapping GA4GH Phenopackets and OHDSI OMOP for COVID-19 disease epidemics and analytics'
+title: 'Mapping OHDSI OMOP Common Data Model and GA4GH Phenopackets for COVID-19 disease epidemics and analytics'
 title_short: 'OMOP to Phenopackets for COVID-19 analytics'
 tags:
+  - Health data
+  - OMOP
+  - Phenopackets
+  - Semantic Web
   - FAIR
+  - Machine Learning
+  - Federated Learning
+  - COVID-19
 authors:
   - name: Núria Queralt-Rosinach
     orcid: 0000-0003-0169-8159
@@ -109,29 +116,32 @@ The COVID-19 crisis demonstrates a critical requirement for rapid and efficient 
 # Results
 -->
 
-## OMOP to Phenopackets
-In order to accomplish the mapping between OMOP CDR and Phenopackets the availability of data in OMOP CDR format is extremely useful. However, due to the extreme sensitivity of real patients data, artificial data have been preferred over real ones.
+## OHDSI OMOP to GA4GH Phenopackets
+In order to accomplish the mapping between OMOP CDM and Phenopackets the availability of data in the OMOP CDM format is extremely useful. However, due to the extreme sensitivity of real patients' data, synthetic data have been preferred over real ones.
 
-### Population of OMOP CDR tables with synthetic patients data
-The process of populating the OMOP CDR tables of a database can roughly be divided into four steps:
-1. Creation of patients data
+### Population of OMOP CDM tables with synthetic patient data
+The process of populating the OMOP CDM tables of a database can roughly be divided into four steps:
+
+1. Creation of synthetic patient data
 2. Database deployment
 3. Vocabularies retrieval
-5. Transfer of patients data and vocabularies to DB
+5. Transfer of patients data and vocabularies to the deployed database
 
-The choice of the tools needed to accomplish these tasks was facilitated by the familiarity of some group member with Synthea[^1], an open-source, synthetic patient generator. In fact, Synthea has an extension called ETL-Synthea[^2] that loads the data created by the former into a PostgreSQL database, set with OMOP CDR schema.
+The choice of the tools needed to accomplish these tasks was facilitated by the familiarity of some group members with Synthea[^1], an open-source, synthetic patient generator. In fact, Synthea has an extension called ETL-Synthea[^2] that loads the data created by the former into a PostgreSQL database, set with OMOP CDM schema.
 
-The first step makes use of Synthea version 2.7[^3]. Once downloaded the jar and the source from the link, a comma separated values (CSV) file with 1000 patients can be created with:
+The first step makes use of Synthea version 2.7[^3]. Once downloaded the `jar` and the source from the prior link, a comma separated values (CSV) file with 1000 patients can be created with:
 ```
-java -jar synthea-with-dependencies.jar -p 1000 -c /pathtosynthea/src/main/resources/synthea.properties
+java -jar synthea-with-dependencies.jar -p 1000 \
+-c /pathtosynthea/src/main/resources/synthea.properties
 ```
-where synthea.properties, located in the source code in /pathtosynthea/synthea/src/main/resources/, must be edited in order to export data in csv format.
+where `synthea.properties`, located in the source code in \
+/pathtosynthea/synthea/src/main/resources/, must be edited in order to export data in csv format.
 ```
 exporter.csv.export = true
 ```
-More recent versions of synthea yield data that can not be ingested by the ETL-Synthea tool only after some columns cutting and editing.
+More recent versions of Synthea yield data that cannot be directly ingested by the ETL-Synthea. They need some cutting and editing in order to be ready to be used.
 
-The next step is to set up a Postgres db. Probably the easiest way is to create a docker container. After installing docker and docker-compose a yaml file like the following can be used:
+The next step is to set up a PostgreSQL database. Probably the easiest way is to create a docker container. After installing docker and docker-compose a yaml file like the following can be used:
 ```
 version: "3"
 services:
@@ -166,15 +176,15 @@ volumes:
   db-data:
   pgadmin-data:
 ```
-The yaml contains the instructions to create the postgres container and a tool for administration connected to it. In order to generate the container:
+The yaml contains the instructions to create the postgreSQL container and a tool for administration connected to it. In order to generate the container:
 ```
 docker-compose up
 ```
 Then, after logging in to the administration tool at http://localhost:8081, it must be created a database called "synthea10" and inside it two schemas named "cdm_synthea10" and "native".
 
-In the third step we chose the athena site[^4] to download the vocabularies. Accepting all the default vocabularies resulted in a zip file of over 4 GB and an error later in the fourth step. Reducing the vocabularies zip file dimension under 3 GB solved the issue.
+In the third step we chose the Athena site[^4] to download the vocabularies. Accepting all the default vocabularies resulted in a zip file of over 4 GB and an error later in the fourth step. Reducing the vocabularies zip file dimension under 3 GB solved the issue.
 
-The next step is the actual population of the PostgreSQL db just created with the synthetic data generated in the first step. The command to execute is:
+The next step is the actual population of the PostgreSQL database just created with the synthetic data generated in the first step. The command to execute this is:
 ```
 Rscript loader_all_master.r
 ```
@@ -199,25 +209,31 @@ syntheaSchema  <- "native"
 syntheaFileLoc <- "/tmp/output/csv"
 vocabFileLoc   <- "/tmp/Vocabulary_restricted"
 
-ETLSyntheaBuilder::CreateCDMTables(connectionDetails = cd, cdmSchema = cdmSchema, cdmVersion = cdmVersion)
+ETLSyntheaBuilder::CreateCDMTables(connectionDetails \
+  = cd, cdmSchema = cdmSchema, cdmVersion = cdmVersion)
 
-ETLSyntheaBuilder::CreateSyntheaTables(connectionDetails = cd, syntheaSchema = syntheaSchema, syntheaVersion = syntheaVersion)
+ETLSyntheaBuilder::CreateSyntheaTables(connectionDetails \
+  = cd, syntheaSchema = syntheaSchema, syntheaVersion = syntheaVersion)
 
-ETLSyntheaBuilder::LoadSyntheaTables(connectionDetails = cd, syntheaSchema = syntheaSchema, syntheaFileLoc = syntheaFileLoc)
+ETLSyntheaBuilder::LoadSyntheaTables(connectionDetails \
+  = cd, syntheaSchema = syntheaSchema, syntheaFileLoc = syntheaFileLoc)
 
-ETLSyntheaBuilder::LoadVocabFromCsv(connectionDetails = cd, cdmSchema = cdmSchema, vocabFileLoc = vocabFileLoc)
+ETLSyntheaBuilder::LoadVocabFromCsv(connectionDetails \
+  = cd, cdmSchema = cdmSchema, vocabFileLoc = vocabFileLoc)
 
-ETLSyntheaBuilder::LoadEventTables(connectionDetails = cd, cdmSchema = cdmSchema, syntheaSchema = syntheaSchema, cdmVersion = cdmVersion, syntheaVersion = syntheaVersion)
+ETLSyntheaBuilder::LoadEventTables(connectionDetails \
+  = cd, cdmSchema = cdmSchema, syntheaSchema = syntheaSchema, \
+  cdmVersion = cdmVersion, syntheaVersion = syntheaVersion)
 ```
 
-The actual server address in the server line must be replaced with the ip address of your database container. Some commands to retrieve it are:
+The actual server address in the server line must be replaced with the IP address of your database container. Some commands to retrieve it are:
 ```
 docker ps #get the db container name e.g. 6cd32142e88c
 docker inspect 6cd32142e88c | grep -i IPADD
 ```
-"pathToDriver" have to filled with the path to the postgresql java driver. For the version included in the yaml shown postgresql-42.3.1.jar is the right choice and can be downloaded from https://jdbc.postgresql.org/download.html
+"pathToDriver" have to be filled with the path to the PostgreSQL java driver. For the version included in the yaml shown `postgresql-42.3.1.jar` is the right choice and can be downloaded from https://jdbc.postgresql.org/download.html
 "user" and "password" are the same set in the yaml by the name of "POSTGRES_USER" and "POSTGRES_PASSWORD".
-"syntheaFileLoc" is the path to the directory containing the synthetic data created with Synthea whereas "vocabFileLoc" points to the path of the directory with the vocabularies.
+"syntheaFileLoc" is the path to the directory containing the synthetic data created with Synthea, whereas "vocabFileLoc" points to the path of the directory with the vocabularies.
 
 
 [^1]:[https://synthetichealth.github.io/synthea/](https://synthetichealth.github.io/synthea/)
