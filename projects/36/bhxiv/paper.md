@@ -59,7 +59,7 @@ authors:
 affiliations:
   - name: Human Genetics, Leiden University Medical Center, Leiden, Netherlands
     index: 1
-  - name:
+  - name: Departamento de Biotecnología-Biología Vegetal, Universidad Politécnica de Madrid, Madrid, Spain
     index: 2
   - name: Department of Biomedical Informatics, Columbia University Irving Medical Campus, New York NY USA
     index: 3
