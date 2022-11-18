@@ -59,7 +59,7 @@ authors:
 affiliations:
   - name: Human Genetics, Leiden University Medical Center, Leiden, Netherlands
     index: 1
-  - name:
+  - name: Departamento de Biotecnología-Biología Vegetal, Universidad Politécnica de Madrid, Madrid, Spain
     index: 2
   - name: Department of Biomedical Informatics, Columbia University Irving Medical Campus, New York NY USA
     index: 3
@@ -85,7 +85,7 @@ affiliations:
     index: 13
 date: 11 November 2021
 cito-bibliography: paper.bib
-event: Barcelona2021
+event: BioHackEU21
 biohackathon_name: "BioHackathon-Europe"
 biohackathon_url:   "https://biohackathon-europe.org/index.html"
 biohackathon_location: "Barcelona, Spain, 2021"
@@ -110,14 +110,23 @@ pasting above link (or yours) in
 -->
 
 # Introduction
-The COVID-19 crisis demonstrates a critical requirement for rapid and efficient sharing of data to facilitate the global response to this and future pandemics. We can address this challenge by making viral genomic and patient phenomic data FAIR, and formalising it to permit seamless data integration for facilitating data analysis. The GA4GH Phenopackets is a standard file format for sharing phenotypic information that facilitates communication within the research and clinical genomics communities [@jacobsen2022a]. The OHDSI Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) allows for large-scale analysis of distributed data to generate evidence for research that promotes better health decisions and better care [@overhage2012a]. These gathered data is used by epidemiologists to monitor the infection, model it and make outbreak analysis and predictions to evaluate policy interventions. To harness Machine Learning (ML) and Artificial Intelligence (AI) approaches to discover meaningful patterns in epidemic outbreaks, we need to ensure that data are FAIR, i.e. data and metadata are accessible and actionable by machines. To leverage data for federated learning/analytics, datasets can be discovered in FAIR Data Points; FAIR data repositories that publish human- and machine-readable metadata for data resources. This project aims to enhance interoperability between health and research data by mapping Phenopackets and OMOP and representing COVID-19 metadata using the FAIR principles to enable discovery, integration and analysis of genotypic and phenotypic data.
+The COVID-19 crisis demonstrates a critical requirement for rapid and efficient sharing of data to facilitate the global response to this and future pandemics. We can address this challenge by making viral genomic and patient phenomic data FAIR, and formalising it to permit seamless data integration for facilitating data analysis. The GA4GH Phenopackets is a standard file format for sharing phenotypic information that facilitates communication within the research and clinical genomics communities [@jacobsen2022a]. The OHDSI Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM) allows for large-scale analysis of distributed data to generate evidence for research that promotes better health decisions and better care [@overhage2012a]. These gathered data is used by epidemiologists to monitor the infection, model it and make outbreak analysis and predictions to evaluate policy interventions. To harness Machine Learning (ML) and Artificial Intelligence (AI) approaches to discover meaningful patterns in epidemic outbreaks, we need to ensure that data are FAIR, i.e. data and metadata are accessible and actionable by machines. To leverage data for federated learning/analytics, datasets can be discovered in FAIR Data Points; FAIR data repositories that publish human- and machine-readable metadata for data resources. Our project aims are to enhance interoperability between health and research data by mapping Phenopackets and OMOP schemas, and representing COVID-19 metadata using the FAIR principles to enable discovery, integration and analysis of genotypic and phenotypic data. Here, we present our outcomes after one week of BioHacking together 17 participants (10 new to the project), from different countries (CH, US and in EU), and continents.
 
 <!--
 # Results
 -->
 
 ## OHDSI OMOP to GA4GH Phenopackets
+We first planned the OMOP to Phenopackets schema mapping as a **patient trajectory** use case driven mapping. OMOP data is meant to be used mostly for cohort analytics, whereas Phenopackets suits better for individual patient analytics. Our goal was to build Phenopackets instances from OMOP SQL tables using SQL queries.
+
 In order to accomplish the mapping between OMOP CDM and Phenopackets the availability of data in the OMOP CDM format is extremely useful. However, due to the extreme sensitivity of real patients' data, synthetic data have been preferred over real ones.
+
+Overall, the patient data interoperability flow for individual patient analytics that we envisioned is:
+
+1. Generation of a synthetic OMOP database
+2. Building Phenopackets from OMOP SQL Tables
+3. OMOP to OBO terminology mapping for downstream analysis. We want to convert OMOP codes to OBO codes to increase the FAIRness of data for analytics. Translating clinical codes used in OMOP from vocabularies such as SNOMED CT and LOINC to OBO ontology codes amenable and commonly used for bioinformatics and data science analytics will increase the interoperability, and such make the data more FAIR for analytics.
+4. ML + ontologies workflows
 
 ### Population of OMOP CDM tables with synthetic patient data
 The process of populating the OMOP CDM tables of a database can roughly be divided into four steps:
